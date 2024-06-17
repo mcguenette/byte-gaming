@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 import heroImage from '../style/img/hero-6.jpg';
 
-function Hero() {
+function Hero({onPrimaryClick}) {
+    const navigate = useNavigate();
+
+    const contactNav = () => {
+        navigate('/contact');
+    };
     return (
         <section className='hero-banner'>
             <div className='hero-image-container'>
@@ -18,10 +24,12 @@ function Hero() {
                         <Button
                             className='primary'
                             text='Shop now'
+                            onClick={onPrimaryClick}
                         />
                         <Button
                             className='secondary'
                             text='Get in touch'
+                            onClick={contactNav}
                         />
                     </div>
                 </div>
