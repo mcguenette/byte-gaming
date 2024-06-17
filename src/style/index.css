@@ -42,7 +42,6 @@ h1,
     font-size: 3.5rem;
     text-align: center;
     font-family: "Bungee Shade", sans-serif;
-    color: var(--primary-green);
 }
 
 .h1 {
@@ -473,7 +472,7 @@ dialog.dialog-container {
 }
 
 /* Product Carousel */
- b {
+ b, h1 {
     background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
     background-clip: text;
     -webkit-background-clip: text;
