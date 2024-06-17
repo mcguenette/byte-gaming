@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Dialog from '../components/Dialog';
 import Button from '../components/Button';
 import ProductCarousel from '../components/ProductCarousel';
+import Subscribe from '../components/Subscribe';
 
 function Home() {
   const [openDialog, setOpenDialog] = useState(false);
@@ -26,7 +27,7 @@ function Home() {
         {openDialog && <Dialog isOpen={openDialog} onClose={closeDialog} />}
       </div>
       <ProductCarousel />
-      
+      <Subscribe />
     </>
 
   );

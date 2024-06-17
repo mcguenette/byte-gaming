@@ -4,6 +4,7 @@
     --primary-dark: #23292a;
     --app-bg-dark: rgb(24, 23, 32);
     --secondary-dark-color: #292837;
+    --primary-grey: #838383;
     --light-color: #fafafa;
     --primary-red: rgb(255, 0, 93);
     --primary-orange: #FF993A;
@@ -12,7 +13,7 @@
     --byte-border: linear-gradient(148deg, #0198ff2e, #0000);
     --primary-green: #00c086;
     --primary-blue: #45c4d2;
-    --primary-blue-hover: rgb(69 196 210 / 18%);
+    --primary-blue-hover: rgb(20 123 183 / 18%);
     --gradient-bg: linear-gradient(148deg, hsl(185.96deg 61.04% 54.71% / 18%), #0000);
 }
 
@@ -32,8 +33,7 @@ h2,
 p,
 li,
 a,
-h3,
-input {
+h3 {
     color: var(--light-color);
 }
 
@@ -55,7 +55,7 @@ main {
 
 h2 {
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1;
 
     span {
@@ -63,7 +63,7 @@ h2 {
 
         /* Use &: for hover, etc while nesting CSS */
         &:hover {
-            color: blue;
+            color: var(--primary-blue);
         }
     }
 }
@@ -80,8 +80,8 @@ p {
     font-size: 1.6rem;
 }
 
-section.product-carousel-section {
-    margin-top: 80px;
+section.product-carousel-section, section.white-bg  {
+    margin-top: 100px;
 }
 
 /* Navigation/Header */
@@ -344,6 +344,10 @@ input::placeholder {
     color: var(--light-color);
 }
 
+input.white-input::placeholder, input.white-input {
+    color: var(--primary-grey);
+}
+
 input {
     width: 300px;
     height: 42px;
@@ -366,6 +370,12 @@ figure {
         width: 150px;
     }
 }
+
+.product-img {
+    border-radius: 10px;
+    width: 300px;
+}
+
 
 form {
     display: flex;
@@ -457,10 +467,12 @@ dialog.dialog-container {
     border-radius: 10px;
 }
 
-/* Product */
-.product-card {
-    padding: 0 10px;
-    height: auto;
+/* Product Carousel */
+.section-title-left b {
+    background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .product-card-inner {
@@ -484,7 +496,7 @@ dialog.dialog-container {
     width: 100%;
     border-radius: 0 12px;
     border: 1px solid transparent;
-    background: linear-gradient(to left, var(--primary-blue) 50%, var(--light-color)) border-box;
+    background: linear-gradient(to left, var(--primary-blue) 50%, var(--primary-green)) border-box;
     -webkit-mask: linear-gradient(var(--light-color) 0 0) padding-box, linear-gradient(var(--light-color) 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -501,5 +513,120 @@ dialog.dialog-container {
     vertical-align: inherit;
 }
 
+.product-carousel-title {
+    display: flex;
+    justify-content: space-between;
+}
 
-/*  */
+.product-carousel {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    margin-top: 80px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+}
+
+.product-card-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+.product-price p {
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.section-title-middle {
+    width: 500px;
+}
+
+.section-title-left {
+    width: 300px;
+}
+
+/* Newsletter homepage  */
+
+section.white-bg {
+    background-color: var(--light-color);
+    padding: 80px 0px;
+}
+
+.subscribe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe-title {
+    width: 415px;
+}
+
+.subscribe-title p {
+    color: var(--primary-grey);
+}
+
+.subscribe-title h2 {
+    margin-bottom: 10px;
+    color: var(--app-bg-dark);
+}
+
+.subscribe-img {
+    border-radius: 10px;
+    width: 500px;
+}
+
+form.white-subscribe {
+    justify-content: flex-start;
+}
+
+
+/*  Footer  */
+/* Footer */
+.footer {
+    background-color: var(--primary-dark);
+    color: var(--light-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.footer-content p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.3rem;
+}
+
+.footer-links, .footer-social {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.footer-links a, .footer-social a {
+    color: var(--light-color);
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: var(--primary-purple);
+}

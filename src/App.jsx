@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Product from './pages/Product';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
             <Route path='/contact' element={<Contact />} />
           </Routes>
         </AnimatePresence>
+        <Footer />
     </main>
   );
 }

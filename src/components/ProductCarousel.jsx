@@ -1,6 +1,9 @@
 import React from 'react';
 import Button from './Button';
-
+import FirstImage from '../style/img/hyperx_headphones.webp';
+import SecondImage from '../style/img/mouse_img.webp';
+import ThirdImage from '../style/img/hyperx_.webp';
+import FourthImage from '../style/img/K596-M686.webp';
 
 function ProductCarousel() {
     return (
@@ -12,34 +15,105 @@ function ProductCarousel() {
                     </div>
                     <div className='section-title-middle'>
                         <p>
-                            Explore our curated collection of elite accessories for
-                            serious gamers. Elevate your gameplay with precision and
-                            performance. Discover the gear that champions rely on!
+                            Explore our curated collection of elite accessories. 
+                            Elevate your gameplay with precision and
+                            performance.
                         </p>
                     </div>
                     <div className='section-title-right'>
-                        {/* button */}
+                        <Button className='secondary' text='View more'/>
                     </div>
                 </div>
                 <div className='product-carousel' >
+                           {/* Adding dummy info for carousel styling - MC */}
                     <div className='product-card'>
+                        <div className='product-card-inner'>
                         <div className='product-card-title'>
                             {/* <h3>{product.title}</h3> */}
+                     <h3>X Headphones</h3>
                         </div>
                         <div className='product-card-image'>
-                            <figure>
-                                {/* <img src={product.image} alt="product"/> */}
+                            <figure>      
+                                <img src={FirstImage} alt="product" className='product-img'/>
                             </figure>
                         </div>
                         <div className='product-card-content'>
                             <div className='product-price'>
-                                {/* {product.price} */}
+                                <p>$ 25.99</p>
                             </div>
                             <div className='product-atc'>
                                 <Button className='primary' text='Add to Cart' />
                             </div>
                         </div>
+                        
+                        </div>
 
+                    </div>
+                    <div className='product-card'>
+                        <div className='product-card-inner'>
+                        <div className='product-card-title'>
+                            {/* <h3>{product.title}</h3> */}
+                     <h3>Y Mouse</h3>
+                        </div>
+                        <div className='product-card-image'>
+                        <figure>      
+                                <img src={SecondImage} alt="product" className='product-img'/>
+                            </figure>
+                        </div>
+                        <div className='product-card-content'>
+                            <div className='product-price'>
+                                {/* {product.price} */}
+                                <p>$ 25.99</p>
+                            </div>
+                            <div className='product-atc'>
+                                <Button className='primary' text='Add to Cart' />
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div className='product-card'>
+                        <div className='product-card-inner'>
+                        <div className='product-card-title'>
+                            {/* <h3>{product.title}</h3> */}
+                     <h3>Z Keyboard</h3>
+                        </div>
+                        <div className='product-card-image'>
+                        <figure>      
+                                <img src={ThirdImage} alt="product" className='product-img'/>
+                            </figure>
+                        </div>
+                        <div className='product-card-content'>
+                            <div className='product-price'>
+                                {/* {product.price} */}
+                                <p>$ 25.99</p>
+                            </div>
+                            <div className='product-atc'>
+                                <Button className='primary' text='Add to Cart' />
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div className='product-card'>
+                        <div className='product-card-inner'>
+                        <div className='product-card-title'>
+                            {/* <h3>{product.title}</h3> */}
+                     <h3>XYZ Bundle</h3>
+                        </div>
+                        <div className='product-card-image'>
+                        <figure>      
+                                <img src={FourthImage} alt="product" className='product-img'/>
+                            </figure>
+                        </div>
+                        <div className='product-card-content'>
+                            <div className='product-price'>
+                                {/* {product.price} */}
+                                <p>$ 25.99</p>
+                            </div>
+                            <div className='product-atc'>
+                                <Button className='primary' text='Add to Cart' />
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
