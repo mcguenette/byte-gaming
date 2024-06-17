@@ -8,7 +8,7 @@ import {
 }
     from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-
+import './footer.css';
 
 const Footer = () => {
     return (
@@ -41,7 +41,7 @@ const Footer = () => {
                         </div>
                         <p>&copy; 2024 MC Guenette | Riley Clark | Nifemi Leye | Maksim Dimov </p>
                         <div className="footer-social">
-                            <a href="https://github.com/mcguenette" target="_blank"><FaGithub /></a>
+                            <a href="https://github.com/mcguenette/byte-gaming" target="_blank"><FaGithub /></a>
                             <a href="https://www.linkedin.com/in/mc-guenette/" target="_blank"><FaLinkedin /></a>
                         </div>
                     </div>

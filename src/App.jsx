@@ -4,7 +4,7 @@ import Header from './components/header/Header';
 import Home from './pages/Home';
 import Product from './pages/Product';
 import Contact from './pages/Contact';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 
 function App() {
   const location = useLocation();
