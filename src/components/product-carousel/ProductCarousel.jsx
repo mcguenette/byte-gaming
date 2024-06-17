@@ -40,7 +40,7 @@ function ProductCarousel() {
                         </div>
                         <div className='product-card-content'>
                             <div className='product-price'>
-                                <p>$ 25.99</p>
+                                <p>$ 159.99</p>
                             </div>
                             <div className='product-atc'>
                                 <Button className='primary' text='Add to Cart' />
@@ -64,7 +64,7 @@ function ProductCarousel() {
                         <div className='product-card-content'>
                             <div className='product-price'>
                                 {/* {product.price} */}
-                                <p>$ 25.99</p>
+                                <p>$ 89.99</p>
                             </div>
                             <div className='product-atc'>
                                 <Button className='primary' text='Add to Cart' />
@@ -86,7 +86,7 @@ function ProductCarousel() {
                         <div className='product-card-content'>
                             <div className='product-price'>
                                 {/* {product.price} */}
-                                <p>$ 25.99</p>
+                                <p>$ 129.99</p>
                             </div>
                             <div className='product-atc'>
                                 <Button className='primary' text='Add to Cart' />
@@ -108,7 +108,7 @@ function ProductCarousel() {
                         <div className='product-card-content'>
                             <div className='product-price'>
                                 {/* {product.price} */}
-                                <p>$ 25.99</p>
+                                <p className='regular'>$199.99</p><p className='sale'>$ 179.99</p>
                             </div>
                             <div className='product-atc'>
                                 <Button className='primary' text='Add to Cart' />
