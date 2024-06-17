@@ -473,14 +473,14 @@ dialog.dialog-container {
 }
 
 /* Product Carousel */
-.section-title-left b, .newsletter-title b {
+ b {
     background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.product-card-inner {
+.product-card-inner, .aboutus-inner {
     padding: 15px;
     position: relative;
     background: linear-gradient(148deg, #0198ff2e, #0000);
@@ -493,7 +493,7 @@ dialog.dialog-container {
     border-radius: 0 12px;
 }
 
-.product-card-inner:before {
+.product-card-inner:before, .aboutus-inner:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -523,22 +523,21 @@ dialog.dialog-container {
     justify-content: space-between;
 }
 
-.product-carousel {
+.product-carousel, .aboutus-team {
     display: flex;
     gap: 20px;
     align-items: stretch;
     margin-top: 80px;
 }
 
-.product-card {
+.product-card, .aboutus-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: auto;
 }
 
-.product-card-content {
+.product-card-content, .aboutus-content {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -563,12 +562,12 @@ dialog.dialog-container {
 
 section.white-bg {
     background-color: var(--light-color);
-    padding: 80px 0px;
+    padding: 60px 0px;
 }
 
 .subscribe-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -598,7 +597,7 @@ form.white-subscribe {
 /*  Footer  */
 /* Footer */
 .footer {
-    background-color: var(--primary-dark);
+    background-color: var(--primary-green);
     color: var(--light-color);
     padding: 0px 20px;
     text-align: center;
@@ -606,7 +605,7 @@ form.white-subscribe {
 
 .footer-content {
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 15px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -642,4 +641,28 @@ form.white-subscribe {
 
 .footer-social a {
     margin: 0px 5px;
+}
+
+
+/* About us  */
+
+.aboutus-team {
+    margin-top: 40px;
+}
+
+.aboutus-container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.about-us-title h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aboutus-content p {
+    text-align: center;
+}
+.aboutus-image {
+    padding: 15px 0px;
 }

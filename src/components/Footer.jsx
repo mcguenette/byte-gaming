@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='container'>
         <footer className="footer">
+          <div className='container'>
             <div className="footer-content">
                 <p>&copy; 2024 MC Guenette | Riley Clark | Nifemi Leye | Maksim Dimov </p>
                 <div className="footer-links">
@@ -18,9 +18,8 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/in/mc-guenette/" target="_blank"><FaLinkedin /></a>
                 </div>
             </div>
+            </div>
         </footer>
-        </div>
-
     );
 }
 
