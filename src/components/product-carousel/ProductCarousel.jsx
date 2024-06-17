@@ -98,7 +98,7 @@ function ProductCarousel() {
                         <div className='product-card-inner'>
                         <div className='product-card-title'>
                             {/* <h3>{product.title}</h3> */}
-                     <h3>XYZ Bundle</h3>
+                     <h3>YZ Bundle</h3>
                         </div>
                         <div className='product-card-image'>
                         <figure>      

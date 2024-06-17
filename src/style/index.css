@@ -269,7 +269,7 @@ button {
 }
 
 .secondary {
-    background-color: transparent;
+    background-color: var(--primary-blue-hover);
     border: 1px solid var(--primary-blue);
     color: var(--light-color);
     width: 175px;
@@ -282,7 +282,7 @@ button {
     touch-action: manipulation;
 
     &:hover {
-        background-color: var(--primary-blue-hover);
+        background-color: rgb(20 123 183 / 50%);
         border: 1px solid var(--primary-blue);
         color: var(--light-color);
     }
@@ -367,40 +367,79 @@ form {
 
 /* Footer */
 .footer {
-    background-color: var(--primary-green);
-    color: var(--light-color);
+    background-color: var(--light-color);
+    color: var(--primary-dark);
     padding: 0px 20px;
-    text-align: center;
 }
 
 .footer-content {
     margin: 0 auto;
-    padding: 15px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    padding: 60px 0px 30px 0px;
 }
 
 .footer-content p {
     margin: 0;
     padding: 10px 0;
     font-size: 1.3rem;
+    color: var(--primary-dark);
 }
 
-.footer-links, .footer-social {
+.footer-top {
     display: flex;
-    justify-content: center;
-    margin: 10px 0;
+    justify-content: space-between;
+    /* margin: 10px 0; */
+    align-items: flex-start;
+    margin-bottom: 40px;
 }
 
-.footer-links a, .footer-social a {
-    color: var(--light-color);
-    margin: 0 15px;
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-top a, .footer-social a {
+    color: var(--primary-dark);
     text-decoration: none;
     transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.footer-links a:hover, .footer-social a:hover {
+hr {
+    border: none;
+    height: 2px;
+    background-image: linear-gradient(to left, var(--primary-blue) 50%, var(--primary-green));
+    margin-bottom: 30px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    font-size: 3rem;
+}
+
+.footer-top a:hover, .footer-social a:hover {
     color: var(--primary-green);
+}
+
+
+li.footer-item svg {
+    display: inline;
+}
+
+li.footer-item {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    line-height: 2.5;
+}
+
+.footer-links-list h3 {
+    margin-bottom: 20px;
+    color: var(--primary-dark);
 }
