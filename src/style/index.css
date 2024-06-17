@@ -48,6 +48,13 @@ h1,
     font-size: 7rem;
 }
 
+b, h1 {
+    background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 main {
     height: 100svh;
 }
@@ -79,7 +86,7 @@ p {
     font-size: 1.6rem;
 }
 
-section.product-carousel-section, section.white-bg  {
+section.white-bg  {
     margin-top: 100px;
 }
 
@@ -472,11 +479,8 @@ dialog.dialog-container {
 }
 
 /* Product Carousel */
- b, h1 {
-    background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+section.product-carousel-section {
+    padding-top: 100px;
 }
 
 .product-card-inner, .aboutus-inner {
@@ -556,6 +560,7 @@ dialog.dialog-container {
 .section-title-left {
     width: 300px;
 }
+
 
 /* Newsletter homepage  */
 
