@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from './Button';
-import heroImage from '../style/img/hero-6.jpg';
+import Button from '../Button';
+import heroImage from '../../style/img/hero-6.jpg';
+import './hero.css';
 
 function Hero({onPrimaryClick}) {
     const navigate = useNavigate();

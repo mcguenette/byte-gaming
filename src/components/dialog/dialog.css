@@ -1,0 +1,62 @@
+/* Dialog */
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    max-width: 550px;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    color: transparent;
+    z-index: 5;
+    -webkit-transition: all ease-in-out .5s;
+    -moz-transition: all ease-in-out .5s;
+    -ms-transition: all ease-in-out .5s;
+    -o-transition: all ease-in-out .5s;
+    transition: all ease-in-out .5s;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: var(--byte-border-radius);
+    background: var(--primary-dark);
+}
+
+svg.close-dialog {
+    color: var(--light-color);
+    font-size: 2rem;
+}
+
+.newsletter-title {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-title,
+.newsletter-content {
+    padding: 20px;
+}
+
+.newsletter-content {
+    text-align: center;
+    padding-top: 0;
+}
+
+.close-icon {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog.dialog-container {
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+}

@@ -1,9 +1,10 @@
 import React from 'react';
-import Button from './Button';
-import FirstImage from '../style/img/hyperx_headphones.webp';
-import SecondImage from '../style/img/mouse_img.webp';
-import ThirdImage from '../style/img/hyperx_.webp';
-import FourthImage from '../style/img/K596-M686.webp';
+import Button from '../Button';
+import FirstImage from '../../style/img/hyperx_headphones.webp';
+import SecondImage from '../../style/img/mouse_img.webp';
+import ThirdImage from '../../style/img//hyperx_.webp';
+import FourthImage from '../../style/img/K596-M686.webp';
+import './carousel.css';
 
 function ProductCarousel() {
     return (

@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import Header from './components/Header';
+import Header from './components/header/Header';
 import Home from './pages/Home';
 import Product from './pages/Product';
 import Contact from './pages/Contact';

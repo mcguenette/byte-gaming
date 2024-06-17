@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Hero from '../components/Hero';
-import Dialog from '../components/Dialog';
+import Hero from '../components/hero/Hero';
+import Dialog from '../components/dialog/Dialog';
 import Button from '../components/Button';
-import ProductCarousel from '../components/ProductCarousel';
-import Subscribe from '../components/Subscribe';
-import AboutUs from '../components/AboutUs';
+import ProductCarousel from '../components/product-carousel/ProductCarousel';
+import Subscribe from '../components/newsletter/Subscribe';
+import AboutUs from '../components/about-us/AboutUs';
 
 function Home() {
   const [openDialog, setOpenDialog] = useState(false);

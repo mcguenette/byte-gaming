@@ -1,8 +1,9 @@
 import React from 'react';
-import mc from '../style/img/profiles/mc.jpg';
-import maksim from '../style/img/profiles/maksim.jpg';
-import riley from '../style/img/profiles/riley.png';
-import nifemi from '../style/img/profiles/nifemi.jpg';
+import mc from '../../style/img/profiles/mc.jpg';
+import maksim from '../../style/img/profiles/maksim.jpg';
+import riley from '../../style/img/profiles/riley.png';
+import nifemi from '../../style/img/profiles/nifemi.jpg';
+import './about.css';
 
 function AboutUs() {
     return (
