@@ -21,7 +21,7 @@ function GetInTouch() {
             <p className='contact-inside-option'>Send us an email directly</p>
             <button className='contact-inside-option'>Email us</button>
         </div>
-          <div className='contact-option contact-inside-option'>
+          <div className='contact-option'>
             <h2 className='contact-title contact-inside-option'>Chat</h2>
             <button className='contact-inside-option'>Chat with us</button>
           </div>
