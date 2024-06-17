@@ -11,7 +11,7 @@ function Hero() {
             <div className='container'>
                 <div className='hero-content'>
                     <h2 className='hero-title'>
-                        Shop <b className='h1'>BYTE </b>gaming gear
+                        Shop <strong className='h1'>BYTE </strong>gaming gear
                     </h2>
                     <p>Unleash Your Full Gaming Potential with Byte's Premium Accessories</p>
                     <div className='hero-btn'>

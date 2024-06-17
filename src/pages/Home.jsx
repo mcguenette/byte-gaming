@@ -4,6 +4,7 @@ import Dialog from '../components/Dialog';
 import Button from '../components/Button';
 import ProductCarousel from '../components/ProductCarousel';
 import Subscribe from '../components/Subscribe';
+import AboutUs from '../components/AboutUs';
 
 function Home() {
   const [openDialog, setOpenDialog] = useState(false);
@@ -28,6 +29,7 @@ function Home() {
       </div>
       <ProductCarousel />
       <Subscribe />
+      <AboutUs />
     </>
 
   );
