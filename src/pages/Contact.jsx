@@ -1,15 +1,14 @@
 import React from 'react'
-import HeroContact from '../components/HeroContact';
-import Header from '../components/Header';
-import ContactContact from '../components/ContactContact';
+import GetInTouch from '../components/GetInTouch';
+import ContactForm from '../components/ContactForm';
 
 
 function Contact() {
   return (
     <div>
-    <HeroContact />
     <div className='container'>
-     <ContactContact />S
+     <GetInTouch />
+     <ContactForm />
     </div>
     </div>
   )
