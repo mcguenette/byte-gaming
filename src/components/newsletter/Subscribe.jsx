@@ -1,7 +1,8 @@
 import React from 'react';
-import SubscribeImg from '../style/img/image-2.avif';
+import SubscribeImg from '../../style/img/image-2.avif';
 import { useForm } from 'react-hook-form';
-import Button from './Button';
+import Button from '../Button';
+import './newsletter.css';
 
 function Subscribe() {
     const { register, handleSubmit, formState: { errors } } = useForm();
