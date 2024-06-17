@@ -433,12 +433,6 @@ svg.close-dialog {
 .newsletter-title {
     display: flex;
     justify-content: center;
-
-    & h2 {
-        color: var(--primary-blue);
-        font-weight: 600;
-        font-size: 3rem;
-    }
 }
 
 .newsletter-title,
@@ -468,7 +462,7 @@ dialog.dialog-container {
 }
 
 /* Product Carousel */
-.section-title-left b {
+.section-title-left b, .newsletter-title b {
     background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
     background-clip: text;
     -webkit-background-clip: text;

@@ -39,7 +39,7 @@ function Dialog({ isOpen, onClose }) {
             <IoClose onClick={close} className='close-dialog'/>
             </div>
             <div className='newsletter-title'>
-                <h2>Level Up with Byte</h2>
+                <h2><b>Level Up </b>with Byte</h2>
             </div>
             <div className='newsletter-content'>
                 <p>Subscribe now for updates, special</p>
