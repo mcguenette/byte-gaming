@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import { MdOutlineAccountCircle } from "react-icons/md";
+import { FaCircleUser } from "react-icons/fa6";
 import { NavLink, Link } from 'react-router-dom';
 
 function Navbar() {
@@ -36,7 +36,7 @@ function Navbar() {
                         </ul>
                 </li>
                 <li><NavLink to='/contact'>Contact</NavLink></li>
-                <li><Link><MdOutlineAccountCircle className='account'/></Link></li>
+                <li className='account'><Link><FaCircleUser /></Link></li>
             </ul>
         </nav>
     );

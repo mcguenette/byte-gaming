@@ -132,6 +132,12 @@ li {
     display: inline;
 }
 
+li.account a {
+    font-size: 2.6rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Sub nav */
 .navbar {
     padding: 10px 0;
@@ -594,7 +600,7 @@ form.white-subscribe {
 .footer {
     background-color: var(--primary-dark);
     color: var(--light-color);
-    padding: 20px 0;
+    padding: 0px 20px;
     text-align: center;
 }
 
@@ -627,5 +633,13 @@ form.white-subscribe {
 }
 
 .footer-links a:hover, .footer-social a:hover {
-    color: var(--primary-purple);
+    color: var(--primary-green);
+}
+
+.footer-social {
+    font-size: 2.6rem;
+}
+
+.footer-social a {
+    margin: 0px 5px;
 }
