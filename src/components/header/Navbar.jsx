@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { FaCircleUser, FaCartShopping } from "react-icons/fa6";
 import { NavLink, Link } from 'react-router-dom';
 
 function Navbar() {
@@ -29,12 +30,18 @@ function Navbar() {
                         onMouseEnter={mouseEnter}
                         onMouseLeave={mouseLeave}
                         >
-                             <li><Link to='/products/x-headphones'>X Headphones</Link></li>
-                            <li><Link to='/products/y-mouse'>Y Mouse</Link></li>
-                            <li><Link to='/products/z-keyboard'>Z Keyboard</Link></li>
+                             <li><Link to='/product/1'>X Headphones</Link></li>
+                            <li><Link to='/product/2'>Y Mouse</Link></li>
+                            <li><Link to='/product/3'>Z Keyboard</Link></li>
                         </ul>
                 </li>
                 <li><NavLink to='/contact'>Contact</NavLink></li>
+                <li>|</li>
+                <ul className='nav-menu nav-icons'>
+                <li className='account-icon'><Link>Sign in</Link></li>
+                <li className='cart-icon'><Link><FaCartShopping /></Link></li>
+                </ul>
+
             </ul>
         </nav>
     );

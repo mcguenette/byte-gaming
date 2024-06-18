@@ -1,11 +1,13 @@
 import React from 'react';
-import Button from './Button';
-import FirstImage from '../style/img/hyperx_headphones.webp';
-import SecondImage from '../style/img/mouse_img.webp';
-import ThirdImage from '../style/img/hyperx_.webp';
-import FourthImage from '../style/img/K596-M686.webp';
+import Button from '../Button';
+import FirstImage from '../../style/img/hyperx_headphones.webp';
+import SecondImage from '../../style/img/mouse_img.webp';
+import ThirdImage from '../../style/img//hyperx_.webp';
+import FourthImage from '../../style/img/K596-M686.webp';
 
-function ProductCarousel() {
+import './carousel.css';
+
+function ProductCarouselOG() {
     return (
         <section className='product-carousel-section'>
             <div className='container'>
@@ -39,7 +41,7 @@ function ProductCarousel() {
                         </div>
                         <div className='product-card-content'>
                             <div className='product-price'>
-                                <p>$ 25.99</p>
+                                <p>$ 159.99</p>
                             </div>
                             <div className='product-atc'>
                                 <Button className='primary' text='Add to Cart' />
@@ -63,7 +65,7 @@ function ProductCarousel() {
                         <div className='product-card-content'>
                             <div className='product-price'>
                                 {/* {product.price} */}
-                                <p>$ 25.99</p>
+                                <p>$ 89.99</p>
                             </div>
                             <div className='product-atc'>
                                 <Button className='primary' text='Add to Cart' />
@@ -85,7 +87,7 @@ function ProductCarousel() {
                         <div className='product-card-content'>
                             <div className='product-price'>
                                 {/* {product.price} */}
-                                <p>$ 25.99</p>
+                                <p>$ 129.99</p>
                             </div>
                             <div className='product-atc'>
                                 <Button className='primary' text='Add to Cart' />
@@ -97,7 +99,7 @@ function ProductCarousel() {
                         <div className='product-card-inner'>
                         <div className='product-card-title'>
                             {/* <h3>{product.title}</h3> */}
-                     <h3>XYZ Bundle</h3>
+                     <h3>YZ Bundle</h3>
                         </div>
                         <div className='product-card-image'>
                         <figure>      
@@ -107,7 +109,7 @@ function ProductCarousel() {
                         <div className='product-card-content'>
                             <div className='product-price'>
                                 {/* {product.price} */}
-                                <p>$ 25.99</p>
+                                <p className='regular'>$199.99</p><p className='sale'>$ 179.99</p>
                             </div>
                             <div className='product-atc'>
                                 <Button className='primary' text='Add to Cart' />
@@ -121,4 +123,4 @@ function ProductCarousel() {
     )
 };
 
-export default ProductCarousel;
+export default ProductCarouselOG;

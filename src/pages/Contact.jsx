@@ -1,8 +1,22 @@
 import React from 'react'
+import GetInTouch from '../components/GetInTouch';
+import ContactForm from '../components/ContactForm';
+import { motion } from 'framer-motion';
 
-function Contact() {
+
+function Contact({pageTransition}) {
   return (
-    <div>Contact</div>
+    <motion.div
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    variants={pageTransition}
+  >
+    <div className='container'>
+     <GetInTouch />
+     <ContactForm />
+    </div>
+    </motion.div>
   )
 }
 

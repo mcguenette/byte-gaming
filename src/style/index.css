@@ -5,7 +5,7 @@
     --app-bg-dark: rgb(24, 23, 32);
     --secondary-dark-color: #292837;
     --primary-grey: #838383;
-    --light-color: #fafafa;
+    --light-color: #fff;
     --primary-red: rgb(255, 0, 93);
     --primary-orange: #FF993A;
     --primary-purple: #90f;
@@ -28,25 +28,24 @@ body {
     margin-inline: auto;
 }
 
-h1,
-h2,
-p,
-li,
-a,
-h3 {
-    color: var(--light-color);
-}
+
 
 h1,
 .h1 {
     font-size: 3.5rem;
     text-align: center;
     font-family: "Bungee Shade", sans-serif;
-    color: var(--primary-green);
 }
 
 .h1 {
     font-size: 7rem;
+}
+
+b, h1 {
+    background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 main {
@@ -80,7 +79,7 @@ p {
     font-size: 1.6rem;
 }
 
-section.product-carousel-section, section.white-bg  {
+section.white-bg  {
     margin-top: 100px;
 }
 
@@ -122,6 +121,14 @@ section.product-carousel-section, section.white-bg  {
 }
 
 /* Navigation/Header */
+header {
+    z-index: 3;
+    position: relative;
+}
+
+a.active {
+    color: var(--primary-green);
+}
 
 .main-logo img {
     width: 60px;
@@ -137,7 +144,7 @@ section.product-carousel-section, section.white-bg  {
 .right-nav a,
 .right-nav div {
     text-decoration: none;
-    color: inherit;
+    color: var(--light-color);
     transition: 0.3s ease-in;
     font-size: 1.8rem;
 }
@@ -169,6 +176,12 @@ li {
     display: inline;
 }
 
+li.account a {
+    font-size: 2.6rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Sub nav */
 .navbar {
     padding: 10px 0;
@@ -182,6 +195,11 @@ li {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+ul.nav-menu.nav-icons {
+    margin-left: 25px;
+    align-items: center;
 }
 
 .nav-item {
@@ -257,65 +275,10 @@ li {
     font-size: 1.4rem;
 }
 
-
-/* Hero Banner */
-.hero-banner {
-    position: relative;
-    overflow: hidden;
-    height: 600px;
+li.cart-icon {
+    margin-left: 15px;
 }
-
-.hero-image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.hero-content span {
-    background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 600;
-}
-
-.hero-content p {
-    font-size: 2rem;
-    z-index: 2;
-}
-
-.hero-content {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 600px;
-    gap: 25px;
-}
-
-h2.hero-title {
-    font-size: 7rem;
-    z-index: 2;
-}
-
-.hero-btn {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-}
+/* Button */
 
 .buttons {
     display: flex;
@@ -348,7 +311,7 @@ button {
 }
 
 .secondary {
-    background-color: transparent;
+    background-color: var(--primary-blue-hover);
     border: 1px solid var(--primary-blue);
     color: var(--light-color);
     width: 175px;
@@ -361,7 +324,7 @@ button {
     touch-action: manipulation;
 
     &:hover {
-        background-color: var(--primary-blue-hover);
+        background-color: rgb(20 123 183 / 50%);
         border: 1px solid var(--primary-blue);
         color: var(--light-color);
     }
@@ -400,7 +363,6 @@ figure {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
 
     & img {
         border-radius: 50%;
@@ -435,147 +397,6 @@ form {
     margin: 0 auto 25px;
 }
 
-/* Dialog */
-.dialog {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    right: 0;
-    max-width: 550px;
-    width: 95%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    color: transparent;
-    z-index: 5;
-    -webkit-transition: all ease-in-out .5s;
-    -moz-transition: all ease-in-out .5s;
-    -ms-transition: all ease-in-out .5s;
-    -o-transition: all ease-in-out .5s;
-    transition: all ease-in-out .5s;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    border-radius: var(--byte-border-radius);
-    background: var(--primary-dark);
-}
-
-svg.close-dialog {
-    color: var(--light-color);
-    font-size: 2rem;
-}
-
-.newsletter-title {
-    display: flex;
-    justify-content: center;
-}
-
-.newsletter-title,
-.newsletter-content {
-    padding: 20px;
-}
-
-.newsletter-content {
-    text-align: center;
-    padding-top: 0;
-}
-
-.close-icon {
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-}
-
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-dialog.dialog-container {
-    background: transparent;
-    border: none;
-    border-radius: 10px;
-}
-
-/* Product Carousel */
-.section-title-left b, .newsletter-title b {
-    background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.product-card-inner {
-    padding: 15px;
-    position: relative;
-    background: linear-gradient(148deg, #0198ff2e, #0000);
-    transition: all ease-in-out .5s;
-    -webkit-transition: all ease-in-out .5s;
-    -moz-transition: all ease-in-out .5s;
-    -ms-transition: all ease-in-out .5s;
-    -o-transition: all ease-in-out .5s;
-    width: 100%;
-    border-radius: 0 12px;
-}
-
-.product-card-inner:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    border-radius: 0 12px;
-    border: 1px solid transparent;
-    background: linear-gradient(to left, var(--primary-blue) 50%, var(--primary-green)) border-box;
-    -webkit-mask: linear-gradient(var(--light-color) 0 0) padding-box, linear-gradient(var(--light-color) 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-:after,
-:before {
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    text-decoration: inherit;
-    vertical-align: inherit;
-}
-
-.product-carousel-title {
-    display: flex;
-    justify-content: space-between;
-}
-
-.product-carousel {
-    display: flex;
-    gap: 20px;
-    align-items: stretch;
-    margin-top: 80px;
-}
-
-.product-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: auto;
-}
-
-.product-card-content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    align-items: center;
-}
-
-.product-price p {
-    font-size: 1.8rem;
-    color: var(--primary-blue);
-    font-weight: 600;
-}
 
 .section-title-middle {
     width: 500px;
@@ -585,79 +406,3 @@ dialog.dialog-container {
     width: 300px;
 }
 
-/* Newsletter homepage  */
-
-section.white-bg {
-    background-color: var(--light-color);
-    padding: 80px 0px;
-}
-
-.subscribe-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.subscribe-title {
-    width: 415px;
-}
-
-.subscribe-title p {
-    color: var(--primary-grey);
-}
-
-.subscribe-title h2 {
-    margin-bottom: 10px;
-    color: var(--app-bg-dark);
-}
-
-.subscribe-img {
-    border-radius: 10px;
-    width: 500px;
-}
-
-form.white-subscribe {
-    justify-content: flex-start;
-}
-
-
-/*  Footer  */
-/* Footer */
-.footer {
-    background-color: var(--primary-dark);
-    color: var(--light-color);
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-content {
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-}
-
-.footer-content p {
-    margin: 0;
-    padding: 10px 0;
-    font-size: 1.3rem;
-}
-
-.footer-links, .footer-social {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-.footer-links a, .footer-social a {
-    color: var(--light-color);
-    margin: 0 15px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover, .footer-social a:hover {
-    color: var(--primary-purple);
-}

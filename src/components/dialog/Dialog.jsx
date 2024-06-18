@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import Button from './Button';
+import Button from '../Button';
 import { IoClose } from "react-icons/io5";
 import { useForm } from 'react-hook-form';
+import './dialog.css';
 
 function Dialog({ isOpen, onClose }) {
     const dialogRef = useRef(null);
