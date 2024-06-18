@@ -35,10 +35,10 @@ function ProductCarousel() {
                         <Button className='secondary' text='View more' />
                     </div>
                 </div>
-                {
-                    products.slice(0, 4).map(product => (
-                        <div key={product.id} className='product-carousel' >
-                            <div className='product-card'>
+                <div className='product-carousel' >
+                    {
+                        products.slice(0, 4).map(product => (
+                            <div key={product.id} className='product-card'>
                                 <div className='product-card-inner'>
                                     <div className='product-card-title'>
                                         {/* <h3>{product.title}</h3> */}
@@ -59,9 +59,9 @@ function ProductCarousel() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
+                </div>
             </div>
         </section>
     )
