@@ -8,18 +8,15 @@ function Product() {
     const { id } = useParams();
 
     async function getProduct() {
-        const response = await fetch(`https://dummyjson.com/products/${id}`); // Fetch a specific product by ID
-        const data = await response.json(); // Convert the response to JSON
-        setProduct(data); // Set the product data in the state
+        const response = await fetch(`https://dummyjson.com/products/${id}`); 
+        const data = await response.json(); 
+        setProduct(data); 
     }
 
     useEffect(() => {
         getProduct();
     }, [id]);
 
-    if (!product) {
-        return <div>Loading...</div>;
-    }
 
     return (
         <div className='product-container'>
