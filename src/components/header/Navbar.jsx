@@ -30,9 +30,9 @@ function Navbar() {
                         onMouseEnter={mouseEnter}
                         onMouseLeave={mouseLeave}
                         >
-                             <li><Link to='/products/1'>X Headphones</Link></li>
-                            <li><Link to='/products/2'>Y Mouse</Link></li>
-                            <li><Link to='/products/3'>Z Keyboard</Link></li>
+                             <li><Link to='/product/1'>X Headphones</Link></li>
+                            <li><Link to='/product/2'>Y Mouse</Link></li>
+                            <li><Link to='/product/3'>Z Keyboard</Link></li>
                         </ul>
                 </li>
                 <li><NavLink to='/contact'>Contact</NavLink></li>
