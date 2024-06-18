@@ -27,16 +27,16 @@ function App() {
   return (
     <main>
       {location.pathname !== '/' && <Header />}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route
             exact
             path='/'
             element={
               <motion.div
-                initial="initial"
-                animate="animate"
-                exit="exit"
+                initial='initial'
+                animate='animate'
+                exit='exit'
                 variants={homeVariants}
               >
                 <Home />
@@ -47,9 +47,9 @@ function App() {
             path='/product/:id'
             element={
               <motion.div
-                initial="initial"
-                animate="animate"
-                exit="exit"
+                initial='initial'
+                animate='animate'
+                exit='exit'
                 variants={pageVariants}
               >
                 <Product />
@@ -60,9 +60,9 @@ function App() {
             path='/contact'
             element={
               <motion.div
-                initial="initial"
-                animate="animate"
-                exit="exit"
+                initial='initial'
+                animate='animate'
+                exit='exit'
                 variants={pageVariants}
               >
                 <Contact />
