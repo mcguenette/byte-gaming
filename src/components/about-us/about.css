@@ -41,9 +41,26 @@
     width: 100%;
     align-items: center;
 }
+
 .aboutus-team {
     display: flex;
     gap: 20px;
     align-items: stretch;
-    margin-top: 80px;
+    margin-top: 40px;
+}
+
+.about-us-title h3 {
+    text-align: center;
+}
+
+.aboutus-content p {
+    text-align: center;
+}
+
+.aboutus-image {
+    margin: 30px 0px 30px 0px;
+}
+
+section.aboutus {
+    padding: 100px 0px 100px 0px;
 }

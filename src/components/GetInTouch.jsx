@@ -1,10 +1,11 @@
 import React from 'react';
+import Button from './Button';
 
 function GetInTouch() {
     return (
         <div>
         <h2 className='contact-first-words'><b>Feel free to contact us</b></h2>
-        <p>
+        <p className='contact-paragraph'>
           We’d love to hear from you! Whether you have questions, 
           feedback, or need assistance, our team is here to help. 
           Reach out to us through any of the methods below, and we’ll 
@@ -19,11 +20,11 @@ function GetInTouch() {
           <div className='contact-option'>
             <h2 className='contact-title contact-inside-option'>Email</h2>
             <p className='contact-inside-option'>Send us an email directly</p>
-            <button className='contact-inside-option'>Email us</button>
+            <Button className='contact-inside-option' text="Email us"/>
         </div>
           <div className='contact-option'>
             <h2 className='contact-title contact-inside-option'>Chat</h2>
-            <button className='contact-inside-option'>Chat with us</button>
+            <Button className='contact-inside-option' text="Chat with us" />
           </div>
         </div>
         </div>
