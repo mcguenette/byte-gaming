@@ -7,18 +7,18 @@ import Product from './pages/Product';
 import Contact from './pages/Contact';
 import Footer from './components/footer/Footer';
 
-const pageVariants = {
-  initial: { opacity: 0, y: 10 },
+const pageTransition = {
+  initial: { opacity: 0, y: 5 },
   animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -10 },
-  transition: { duration: 0.4 },
+  exit: { opacity: 0, y: -5 },
+  transition: { duration: 0.3 },
 };
 
-const homeVariants = {
-  initial: { opacity: 0, y: -10 },
+const homeTransition = {
+  initial: { opacity: 0, y: -5 },
   animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 10 },
-  transition: { duration: 0.4 },
+  exit: { opacity: 0, y: 5 },
+  transition: { duration: 0.3 },
 };
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
                 initial='initial'
                 animate='animate'
                 exit='exit'
-                variants={homeVariants}
+                variants={homeTransition}
               >
                 <Home />
               </motion.div>
@@ -50,7 +50,7 @@ function App() {
                 initial='initial'
                 animate='animate'
                 exit='exit'
-                variants={pageVariants}
+                variants={pageTransition}
               >
                 <Product />
               </motion.div>
@@ -63,7 +63,7 @@ function App() {
                 initial='initial'
                 animate='animate'
                 exit='exit'
-                variants={pageVariants}
+                variants={pageTransition}
               >
                 <Contact />
               </motion.div>
