@@ -2,6 +2,7 @@ import React from 'react'
 import GetInTouch from '../components/GetInTouch';
 import ContactForm from '../components/ContactForm';
 import { motion } from 'framer-motion';
+import '../style/contact.css'
 
 
 function Contact({pageTransition}) {
