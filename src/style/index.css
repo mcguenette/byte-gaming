@@ -90,6 +90,43 @@ section.white-bg  {
     margin-top: 100px;
 }
 
+/* Product Page */
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-right: 20px;
+  }
+  
+  .product-description {
+    max-width: 60%; 
+  }
+
+  .quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 6px 16px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #45a049;
+}
+
 /* Navigation/Header */
 
 .main-logo img {
