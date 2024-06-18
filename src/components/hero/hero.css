@@ -1,0 +1,59 @@
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    height: 650px;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.hero-content span {
+    background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 650px;
+    gap: 25px;
+    opacity: 1;
+}
+
+h2.hero-title {
+    font-size: 7rem;
+    z-index: 2;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
