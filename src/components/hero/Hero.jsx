@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Button';
+import Header from '../header/Header';
 import heroImage from '../../style/img/hero-6.jpg';
 import './hero.css';
 
@@ -13,6 +14,7 @@ function Hero({onPrimaryClick}) {
     return (
         <section className='hero-banner'>
             <div className='hero-image-container'>
+                <Header />
                 <img src={heroImage} alt="Hero Banner" className="hero-image" />
             </div>
             <div className='container'>

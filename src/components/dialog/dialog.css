@@ -60,3 +60,7 @@ dialog.dialog-container {
     border: none;
     border-radius: 10px;
 }
+
+.newsletter-content p, .newsletter-title h2 {
+    color: var(--light-color);
+}
