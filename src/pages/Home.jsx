@@ -6,14 +6,7 @@ import Subscribe from '../components/newsletter/Subscribe';
 import AboutUs from '../components/about-us/AboutUs';
 import { motion } from 'framer-motion';
 
-const homeVariants = {
-  initial: { opacity: 0, y: -10 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 10 },
-  transition: { duration: 0.4 },
-};
-
-function Home() {
+function Home({homeTransition}) {
   const [openDialog, setOpenDialog] = useState(false);
   const prodCarouselRef = useRef(null);
 
@@ -40,7 +33,7 @@ function Home() {
       initial="initial"
       animate="animate"
       exit="exit"
-      variants={homeVariants}
+      variants={homeTransition}
     >
       <Hero onPrimaryClick={heroBtnClick} />
       <div className='container dialog-container'>
