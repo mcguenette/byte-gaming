@@ -5,7 +5,7 @@
     --app-bg-dark: rgb(24, 23, 32);
     --secondary-dark-color: #292837;
     --primary-grey: #838383;
-    --light-color: #fafafa;
+    --light-color: #fff;
     --primary-red: rgb(255, 0, 93);
     --primary-orange: #FF993A;
     --primary-purple: #90f;
@@ -84,6 +84,10 @@ section.white-bg  {
 }
 
 /* Navigation/Header */
+header {
+    z-index: 3;
+    position: relative;
+}
 
 a.active {
     color: var(--primary-green);
@@ -103,7 +107,7 @@ a.active {
 .right-nav a,
 .right-nav div {
     text-decoration: none;
-    color: inherit;
+    color: var(--light-color);
     transition: 0.3s ease-in;
     font-size: 1.8rem;
 }

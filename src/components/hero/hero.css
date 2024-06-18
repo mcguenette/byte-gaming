@@ -2,7 +2,7 @@
 .hero-banner {
     position: relative;
     overflow: hidden;
-    height: 600px;
+    height: 650px;
 }
 
 .hero-image-container {
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 600px;
+    height: 650px;
     gap: 25px;
     opacity: 1;
 }
