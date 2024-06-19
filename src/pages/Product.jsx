@@ -11,7 +11,7 @@ function Product({ pageTransition }) {
   const [selectedImage, setSelectedImage] = useState('');
   const [imageClassName, setImageClassName] = useState('product-img fade-in');
   const { id } = useParams();
-  const { addToCart } = useContext(CartContext); // Use CartContext
+  const { addToCart } = useContext(CartContext); 
 
   async function getProduct() {
     try {
@@ -34,7 +34,6 @@ function Product({ pageTransition }) {
     setImageClassName('product-img fade-in');
   };
 
-  // Updated addProductToCart function to use addToCart from context
   const addProductToCart = (product) => {
     addToCart(product);
   };
@@ -44,35 +43,35 @@ function Product({ pageTransition }) {
   }
 
   return (
-    <motion.div
-      initial='initial'
-      animate='animate'
-      exit='exit'
-      variants={pageTransition}
-    >
-      <div className='product-page'>
-        <div className='image-and-display-container'>
-          <div className='product-image-container'>
-            <img src={selectedImage} alt={`${product.title} image`} className={imageClassName} loading='lazy' />
-            <ProductDisplay id={id} setSelectedImage={handleImageChange} />
-          </div>
-          <div className='product-info'>
-            <h1 className='product-title'>{product.title}</h1>
-            <div className='product-description'>
-              <p>{product.description}</p>
-              <div className='product-price'>
-                ${product.price}
-                <Button
-                    className='primary'
-                    text='Add to cart'
-                    onClick={() => addProductToCart(product)}
-                />
-                <QuantityBox />
+        <motion.div
+          initial='initial'
+          animate='animate'
+          exit='exit'
+          variants={pageTransition}
+        >
+          <div className='product-page container'>
+            <div className='image-and-display-container'>
+              <div className='product-image-container'>
+                <img src={selectedImage} alt={`${product.title} image`} className={imageClassName} loading='lazy' />
+                <ProductDisplay id={id} setSelectedImage={handleImageChange} />
+              </div>
+              <div className='product-info'>
+                <h1 className='product-title'>{product.title}</h1>
+                <div className='product-description'>
+                  <p>{product.description}</p>
+                  <div className='product-price'>
+                    ${product.price}
+                    <QuantityBox />
+                    <Button
+                        className='primary'
+                        text='Add to cart'
+                        onClick={() => addProductToCart(product)}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </motion.div>
   );
 }
