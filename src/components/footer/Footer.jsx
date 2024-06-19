@@ -6,15 +6,15 @@ import {
     FaEnvelope,
     FaPhone
 }
-    from "react-icons/fa6";
+    from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import './footer.css';
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className='footer'>
             <div className='container'>
-                <div className="footer-content">
+                <div className='footer-content'>
                     <div className='footer-top'>
                         <div className='footer-links-list'>
                             <h3>Company</h3>
@@ -40,9 +40,9 @@ const Footer = () => {
                             <h1>BYTE</h1>
                         </div>
                         <p>&copy; 2024 MC Guenette | Riley Clark | Nifemi Leye | Maksim Dimov </p>
-                        <div className="footer-social">
-                            <a href="https://github.com/mcguenette/byte-gaming" target="_blank"><FaGithub /></a>
-                            <a href="https://www.linkedin.com/in/mc-guenette/" target="_blank"><FaLinkedin /></a>
+                        <div className='footer-social'>
+                            <a href='https://github.com/mcguenette/byte-gaming' target='_blank'><FaGithub /></a>
+                            <a href='https://www.linkedin.com/in/mc-guenette/' target='_blank'><FaLinkedin /></a>
                         </div>
                     </div>
                 </div>
