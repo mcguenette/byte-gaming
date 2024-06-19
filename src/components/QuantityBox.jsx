@@ -14,10 +14,10 @@ function QuantityBox() {
     };
     
     return (
-      <div className='quantity-selector'>
-        <button onClick={decrement}>-</button>
-        <input type='number' value={quantity} readOnly />
-        <button onClick={increment}>+</button>
+    <div className='quantity-selector'>
+      <button onClick={decrement} className="circle-button subract">-</button>
+      <input type='number' value={quantity} readOnly />
+      <button onClick={increment} className="circle-button add">+</button>
       </div>
     );
   }
