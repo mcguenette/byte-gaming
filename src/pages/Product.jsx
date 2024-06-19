@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Quantity from '../components/QuantityBox';
+import QuantityBox from '../components/QuantityBox';
 import { motion } from 'framer-motion';
 
 function Product({ pageTransition }) {
@@ -32,7 +32,7 @@ function Product({ pageTransition }) {
         <div className='product-img-container'>
           <img src={product.thumbnail} alt={product.title} className='product-img' />
           <h1>{product.title}</h1>
-          <Quantity />
+          <QuantityBox />
         </div>
         <div className='product-description'>
           <p>{product.description}</p>
