@@ -86,39 +86,220 @@ section.white-bg  {
 /* Product Page */
 .product-container {
     display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
+    height: auto; 
+    padding: 20px; 
   }
   
   .product-img-container {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    margin-right: 20px;
+    align-items: center;
+  }
+  
+  .product-title { 
+    font-size: 24px; 
+    margin-top: 5px;
+    margin-bottom: 5px; 
   }
   
   .product-description {
-    max-width: 60%; 
+    max-width: 60%;
+    order: 1; 
+    margin-top: 20px;
+  }
+  
+  .product-price {
+    order: 2; 
+    font-size: 20px; 
+    font-weight: bold; 
+    margin-top: 30px; 
+  }
+  
+  .quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px; 
+    order: 3; 
+  }
+  
+  .quantity-selector button,
+  .add-to-cart-button {
+    margin: 0 auto;
+    display: block;
   }
 
-  .quantity-selector {
+  button.add {
+    margin-right: 5px;
+  }
+
+.product-display {
   display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+}
+
+.product-col1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-product-image {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-col2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
   align-items: center;
   gap: 10px;
+  padding: 10px;
 }
 
-.add-to-cart-btn {
-  background-color: #4CAF50; 
-  color: white;
-  padding: 6px 16px;
-  text-align: center;
-  border: none;
+.product-thumbnail {
+  width: 70px; 
+  height: 70px; 
+  object-fit: cover;
   cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.add-to-cart-btn:hover {
-  background-color: #45a049;
+.product-thumbnail:hover, .product-thumbnail.active {
+  opacity: 1;
+  transform: scale(1.1);
 }
+
+.main-image-container {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  .main-image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-thumbnail.active {
+    border: 2px solid blue; 
+  }
+
+  .image-group {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.main-image.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+.main-image.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+.product-page {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 100px;
+  }
+  
+  .image-and-display-container {
+    display: flex;
+    flex-direction: row; /* Change to row for side-by-side layout */
+    align-items: start; /* Align items at the start */
+    width: 100%; /* Use full width */
+  }
+  
+  .product-image-container, .product-info {
+    flex: 1; /* Each takes half of the container */
+  }
+  
+  .product-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-info {
+    display: flex;
+    margin-top: 140px;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  
+  .product-title, .product-description, .product-price, .quantity-selector {
+    text-align: left; /* Align text to the left */
+  }
+  
+  .product-thumbnail {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-top: -20px;
+  }
+  
+  .product-thumbnail:hover, .product-thumbnail.active {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .quantity-selector button, .add-to-cart-button {
+    display: block;
+  }
+
+/* Increment And Decremnet Styles*/
+.circle-button {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 30px; /* Match the button's height */
+}
+  
+  /* Optional: Add hover effect */
+  .circle-button:hover {
+    opacity: 0.8;
+    transition: all 0.25s ease-in-out;
+  }
 
 /* Navigation/Header */
 header {
@@ -292,6 +473,7 @@ button {
     font-variant-numeric: tabular-nums;
     height: 42px;
     text-decoration: none;
+    cursor: pointer;
     font-size: 1.6rem;
 }
 
@@ -372,7 +554,7 @@ figure {
 
 .product-img {
     border-radius: 10px;
-    width: 300px;
+    width: 400px;
 }
 
 
