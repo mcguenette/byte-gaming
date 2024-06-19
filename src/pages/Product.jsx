@@ -56,7 +56,7 @@ import '../components/product-page/product.css';
                 <h4>BYTE GAMING</h4>
                 <h2>{product.title}</h2>
                 <div className='product-description'>
-                  <p>{product.description}</p>
+                  <p className='p'>{product.description}</p>
                   <div className='product-price'>
                     <p>${product.price}</p>
                   </div>
