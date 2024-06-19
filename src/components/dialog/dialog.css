@@ -22,11 +22,11 @@
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     border-radius: var(--byte-border-radius);
-    background: var(--primary-dark);
+    background: var(--light-color);
 }
 
 svg.close-dialog {
-    color: var(--light-color);
+    color: var(--primary-dark);
     font-size: 2rem;
 }
 
@@ -62,5 +62,5 @@ dialog.dialog-container {
 }
 
 .newsletter-content p, .newsletter-title h2 {
-    color: var(--light-color);
+    color: var(--primary-dark);
 }
