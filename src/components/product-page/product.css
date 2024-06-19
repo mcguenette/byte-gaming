@@ -1,0 +1,166 @@
+/* Product Page */
+.product-display-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 0px 100px 0px;
+    gap: 40px;
+}
+
+.product-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-info {
+    width: 100%;
+}
+
+h2.product-title {
+    margin-bottom: 60px;
+}
+
+.product-thumbnail {
+    width: 120px;
+    /* removed height, do not add height to imgs */
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-description, .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product-description .product-price {
+    height: auto;
+}
+
+.product-page-atc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+}
+
+input.qty-input {
+    width: 50px;
+    padding: 5px;
+    text-align: end;
+    border-radius: 5px;
+    margin-inline: 5px;
+}
+
+.quantity-selector button,
+.add-to-cart-button {
+    margin: 0 auto;
+    display: block;
+}
+
+button.add {
+    margin-right: 5px;
+}
+
+.main-product-image {
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-thumbnail:hover,
+.product-thumbnail.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.main-image-container {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.main-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.product-thumbnail.active {
+    border: 2px solid var(--primary-green);
+}
+
+.image-group {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.main-image.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.main-image.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+.product-thumbnail:hover,
+.product-thumbnail.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.quantity-selector button,
+.add-to-cart-button {
+    display: block;
+}
+
+.circle-button {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 30px;
+}
+
+.circle-button:hover {
+    opacity: 0.8;
+    transition: all 0.25s ease-in-out;
+}
+
+
+
+
+

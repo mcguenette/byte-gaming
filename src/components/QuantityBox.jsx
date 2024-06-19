@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from './Button';
 
 function QuantityBox() {
     const [quantity, setQuantity] = useState(1);
@@ -15,9 +16,9 @@ function QuantityBox() {
     
     return (
     <div className='quantity-selector'>
-      <button onClick={decrement} className="circle-button subract">-</button>
-      <input type='number' value={quantity} readOnly />
-      <button onClick={increment} className="circle-button add">+</button>
+      <Button onClick={decrement} className="circle-button subract" text='-'/>
+      <input type='number' value={quantity} readOnly  className='qty-input'/>
+      <Button onClick={increment} className="circle-button add" text='+'/>
       </div>
     );
   }
