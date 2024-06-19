@@ -4,8 +4,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import QuantityBox from '../components/QuantityBox';
 import { motion } from 'framer-motion';
-import ProductDisplay from '../products/ProductDisplay';
+import ProductDisplay from '../components/product-page/ProductDisplay';
 import Button from '../components/Button';
+import '../components/product-page/product.css';
 
     function Product({ pageTransition }) {
       const [product, setProduct] = useState(null);
@@ -46,18 +47,21 @@ import Button from '../components/Button';
           variants={pageTransition}
         >
           <div className='product-page container'>
-            <div className='image-and-display-container'>
+            <div className='product-display-container'>
               <div className='product-image-container'>
                 <img src={selectedImage} alt={`${product.title} image`} className={imageClassName} loading='lazy' />
                 <ProductDisplay id={id} setSelectedImage={handleImageChange} />
               </div>
               <div className='product-info'>
-                <h1 className='product-title'>{product.title}</h1>
+                <h4>BYTE GAMING</h4>
+                <h2>{product.title}</h2>
                 <div className='product-description'>
                   <p>{product.description}</p>
                   <div className='product-price'>
-                    ${product.price}
-                    <QuantityBox />
+                    <p>${product.price}</p>
+                  </div>
+                  <div className='product-page-atc'>
+                  <QuantityBox />
                     <Button
                         className='primary'
                         text='Add to cart'

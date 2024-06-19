@@ -20,31 +20,31 @@ const ProductDisplay = ({ id, setSelectedImage }) => {
   };
 
   return (
-    <div className="product-display">
-      <div className="product-col product-col2">
+    <div className='product-display'>
+      <div className='product-col product-col2'>
         {productImages.slice(0, 4).map((image, index) => (
-          <div key={index} className="image-group">
+          <div key={index} className='image-group'>
             <img
-              alt="Product Thumbnail"
-              className="product-thumbnail"
+              alt='Product Thumbnail'
+              className='product-thumbnail'
               src={image}
               onClick={() => handleClick(image)} // Add onClick event handler here
             />
             <img
-              alt="Product Thumbnail Duplicate"
-              className="product-thumbnail"
+              alt='Product Thumbnail Duplicate'
+              className='product-thumbnail'
               src={image}
               onClick={() => handleClick(image)} // Add onClick event handler here
             />
             <img
-              alt="Product Thumbnail Duplicate 2"
-              className="product-thumbnail"
+              alt='Product Thumbnail Duplicate 2'
+              className='product-thumbnail'
               src={image}
               onClick={() => handleClick(image)} // Add onClick event handler here
             />
             <img
-              alt="Product Thumbnail Duplicate 3"
-              className="product-thumbnail"
+              alt='Product Thumbnail Duplicate 3'
+              className='product-thumbnail'
               src={image}
               onClick={() => handleClick(image)} // Add onClick event handler here
             />
@@ -55,4 +55,4 @@ const ProductDisplay = ({ id, setSelectedImage }) => {
   );
 };
 
-export default ProductDisplay;
+export default ProductDisplay; 
