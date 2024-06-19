@@ -12,9 +12,11 @@ function Cart() {
 
   return (
     <div className='cart-page'>
-      <h2>Your Cart</h2>
+        <div className='cart-title'>
+        <h2>Your Cart</h2>
+        </div>
       {cart.length === 0 ? (
-        <p>Your cart is empty</p>
+        <p className='cart-empty'>Your cart is empty</p>
       ) : (
         <div className='cart-items'>
           {cart.map(product => (

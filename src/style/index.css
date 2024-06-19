@@ -217,7 +217,7 @@ ul.nav-menu.nav-icons {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--light-color);
+    background-color: var(--primary-dark);
     transform-origin: top;
     box-shadow: 0 10px 40px #0000000d;
     opacity: 0;
@@ -253,7 +253,8 @@ ul.nav-menu.nav-icons {
 .subnav-menu li a {
     text-decoration: none;
     display: block;
-    color: var(--app-bg-dark);
+    color: var(--light-color);
+    font-size: 1.6rem;
 }
 
 .nav-item:hover .subnav-menu {
@@ -305,7 +306,7 @@ button {
     touch-action: manipulation;
 
     &:hover {
-        box-shadow: rgb(124 217 227 / 50%) 0 1px 30px;
+        box-shadow: rgb(124 217 227 / 50%) 0 1px 10px;
         transition-duration: .1s;
     }
 }
