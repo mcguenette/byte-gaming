@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useContext } from 'react';
 import Button from '../Button';
 import { CartContext } from '../cart/CartProvider';
+import { useNavigate } from 'react-router-dom';
 import './carousel.css';
 
 function ProductCarousel() {
     const [products, setProducts] = useState([]);
     const { addToCart } = useContext(CartContext); 
+    const navigate = useNavigate();
 
     async function getProducts() {
         const response = await fetch('https://dummyjson.com/products') 
@@ -16,6 +18,12 @@ function ProductCarousel() {
     useEffect(() => {
         getProducts()
     }, [])
+
+    const addProductToCart = (product) => {
+        addToCart(product, () => {
+            navigate('/cart');
+        });
+    };
 
     return (
         <section className='product-carousel-section'>
@@ -56,7 +64,7 @@ function ProductCarousel() {
                                             <Button
                                                 className='primary'
                                                 text='Add to cart'
-                                                onClick={() => addToCart(product)}
+                                                onClick={() => addProductToCart(product)}
                                             />
                                         </div>
                                     </div>
