@@ -189,7 +189,7 @@ ul.nav-menu.nav-icons {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--primary-dark);
+    background-color: var(--light-color);
     transform-origin: top;
     box-shadow: 0 10px 40px #0000000d;
     opacity: 0;
@@ -225,7 +225,7 @@ ul.nav-menu.nav-icons {
 .subnav-menu li a {
     text-decoration: none;
     display: block;
-    color: var(--light-color);
+    color: var(--primary-dark);
     font-size: 1.6rem;
 }
 
