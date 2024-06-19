@@ -15,7 +15,7 @@ function Cart() {
   }, [cart]);
 
   return (
-    <div className='cart-page'>
+    <section className='cart-page'>
       <h2 className='cart-title'>Your Cart</h2>
       {cartItems.length === 0 ? (
         <p className='cart-empty'>Your cart is empty</p>
@@ -50,7 +50,7 @@ function Cart() {
           <Button className='primary' text='Checkout' />
         </div>
       )}
-    </div>
+    </section>
   );
 }
 
