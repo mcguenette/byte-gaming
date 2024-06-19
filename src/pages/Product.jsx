@@ -1,44 +1,48 @@
-// Adjusted JSX for Product Component to include product price and adjust layout
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import QuantityBox from '../components/QuantityBox';
 import { motion } from 'framer-motion';
 import ProductDisplay from '../products/ProductDisplay';
 import Button from '../components/Button';
+import { CartContext } from '../components/cart/CartProvider'; 
 
-    function Product({ pageTransition }) {
-      const [product, setProduct] = useState(null);
-      const [selectedImage, setSelectedImage] = useState('');
-      const [imageClassName, setImageClassName] = useState('product-img fade-in');
-      const { id } = useParams();
-    
-      async function getProduct() {
-        try {
-          const response = await fetch(`https://dummyjson.com/products/${id}`);
-          const data = await response.json();
-          setProduct(data);
-          setSelectedImage(data.thumbnail);
-          window.scrollTo(0, 0);
-        } catch (error) {
-          console.error('Failed to fetch product:', error);
-        }
-      }
+function Product({ pageTransition }) {
+  const [product, setProduct] = useState(null);
+  const [selectedImage, setSelectedImage] = useState('');
+  const [imageClassName, setImageClassName] = useState('product-img fade-in');
+  const { id } = useParams();
+  const { addToCart } = useContext(CartContext); 
 
-      useEffect(() => {
-        getProduct();
-      }, [id]);
+  async function getProduct() {
+    try {
+      const response = await fetch(`https://dummyjson.com/products/${id}`);
+      const data = await response.json();
+      setProduct(data);
+      setSelectedImage(data.thumbnail);
+      window.scrollTo(0, 0);
+    } catch (error) {
+      console.error('Failed to fetch product:', error);
+    }
+  }
 
-      const handleImageChange = (newImage) => {
-        setSelectedImage(newImage);
-        setImageClassName('product-img fade-in');
-      };
+  useEffect(() => {
+    getProduct();
+  }, [id]);
 
-      if (!product) {
-        return <p>Loading...</p>;
-      }
+  const handleImageChange = (newImage) => {
+    setSelectedImage(newImage);
+    setImageClassName('product-img fade-in');
+  };
 
-      return (
+  const addProductToCart = (product) => {
+    addToCart(product);
+  };
+
+  if (!product) {
+    return <p>Loading...</p>;
+  }
+
+  return (
         <motion.div
           initial='initial'
           animate='animate'
@@ -68,8 +72,8 @@ import Button from '../components/Button';
               </div>
             </div>
           </div>
-        </motion.div>
-      );
-    }
+    </motion.div>
+  );
+}
 
-    export default Product;
+export default Product;
