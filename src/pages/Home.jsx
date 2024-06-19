@@ -5,15 +5,9 @@ import ProductCarousel from '../components/product-carousel/ProductCarousel';
 import Subscribe from '../components/newsletter/Subscribe';
 import AboutUs from '../components/about-us/AboutUs';
 import { motion } from 'framer-motion';
+import CartProvider from '../components/cart/CartProvider';
 
-const homeVariants = {
-  initial: { opacity: 0, y: -10 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 10 },
-  transition: { duration: 0.4 },
-};
-
-function Home() {
+function Home({ homeTransition }) {
   const [openDialog, setOpenDialog] = useState(false);
   const prodCarouselRef = useRef(null);
 
@@ -36,22 +30,24 @@ function Home() {
   };
 
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      variants={homeVariants}
-    >
-      <Hero onPrimaryClick={heroBtnClick} />
-      <div className='container dialog-container'>
-        {openDialog && <Dialog isOpen={openDialog} onClose={closeDialog} />}
-      </div>
-      <div ref={prodCarouselRef}>
-        <ProductCarousel />
-      </div>
-      <Subscribe />
-      <AboutUs />
-    </motion.div>
+    <CartProvider>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={homeTransition}
+      >
+        <Hero onPrimaryClick={heroBtnClick} />
+        <div className='container dialog-container'>
+          {openDialog && <Dialog isOpen={openDialog} onClose={closeDialog} />}
+        </div>
+        <div ref={prodCarouselRef}>
+          <ProductCarousel />
+        </div>
+        <Subscribe />
+        <AboutUs />
+      </motion.div>
+    </CartProvider>
   );
 }
 

@@ -15,7 +15,7 @@ function Hero({onPrimaryClick}) {
         <section className='hero-banner'>
             <div className='hero-image-container'>
                 <Header />
-                <img src={heroImage} alt="Hero Banner" className="hero-image" />
+                <img src={heroImage} alt='Hero Banner' className='hero-image' />
             </div>
             <div className='container'>
                 <div className='hero-content'>
