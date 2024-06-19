@@ -6,11 +6,11 @@ import './carousel.css';
 
 function ProductCarousel() {
     const [products, setProducts] = useState([]);
-    const { addToCart } = useContext(CartContext); 
+    const { addToCart } = useContext(CartContext);
     const navigate = useNavigate();
 
     async function getProducts() {
-        const response = await fetch('https://dummyjson.com/products') 
+        const response = await fetch('https://dummyjson.com/products')
         const productData = await response.json()
         setProducts(productData.products)
     }

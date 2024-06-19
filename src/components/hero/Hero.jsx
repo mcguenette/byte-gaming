@@ -5,7 +5,7 @@ import Header from '../header/Header';
 import heroImage from '../../style/img/hero-6.jpg';
 import './hero.css';
 
-function Hero({onPrimaryClick}) {
+function Hero({ onPrimaryClick }) {
     const navigate = useNavigate();
 
     const contactNav = () => {

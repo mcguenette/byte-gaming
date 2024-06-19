@@ -23,9 +23,9 @@ function Product({ pageTransition }) {
 
   return (
     <motion.div
-      initial="initial"
-      animate="animate"
-      exit="exit"
+      initial='initial'
+      animate='animate'
+      exit='exit'
       variants={pageTransition}
     >
       <div className='product-container'>

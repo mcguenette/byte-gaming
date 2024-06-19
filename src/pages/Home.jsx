@@ -32,9 +32,9 @@ function Home({ homeTransition }) {
   return (
     <CartProvider>
       <motion.div
-        initial="initial"
-        animate="animate"
-        exit="exit"
+        initial='initial'
+        animate='animate'
+        exit='exit'
         variants={homeTransition}
       >
         <Hero onPrimaryClick={heroBtnClick} />
