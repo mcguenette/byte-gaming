@@ -28,6 +28,9 @@ body {
     margin-inline: auto;
 }
 
+.flex {
+  display: flex;
+}
 
 
 h1,
