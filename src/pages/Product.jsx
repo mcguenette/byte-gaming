@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import QuantityBox from '../components/QuantityBox';
 import { motion } from 'framer-motion';
 import ProductDisplay from '../products/ProductDisplay';
+import Button from '../components/Button';
 
     function Product({ pageTransition }) {
       const [product, setProduct] = useState(null);
@@ -57,6 +58,11 @@ import ProductDisplay from '../products/ProductDisplay';
                   <div className='product-price'>
                     ${product.price}
                     <QuantityBox />
+                    <Button
+                        className='primary'
+                        text='Add to cart'
+                        onClick={() => addProductToCart(product)}
+                    />
                   </div>
                 </div>
               </div>
