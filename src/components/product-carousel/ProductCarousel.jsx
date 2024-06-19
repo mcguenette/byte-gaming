@@ -10,7 +10,7 @@ function ProductCarousel() {
     const navigate = useNavigate();
 
     async function getProducts() {
-        const response = await fetch('https://bytegamingapi.azurewebsites.net/products')
+        const response = await fetch('https://dummyjson.com/products')
         const productData = await response.json()
         setProducts(productData.products)
     }
