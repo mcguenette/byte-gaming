@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import { FaCircleUser, FaCartShopping } from "react-icons/fa6";
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
+import { FaCircleUser, FaCartShopping } from 'react-icons/fa6';
 import { NavLink, Link } from 'react-router-dom';
 
 function Navbar() {
@@ -39,7 +39,7 @@ function Navbar() {
                 <li>|</li>
                 <ul className='nav-menu nav-icons'>
                 <li className='account-icon'><Link>Sign in</Link></li>
-                <li className='cart-icon'><Link><FaCartShopping /></Link></li>
+                <li className='cart-icon'><Link to='/cart'><FaCartShopping /></Link></li>
                 </ul>
 
             </ul>

@@ -5,7 +5,7 @@ function GetInTouch() {
         <div>
         <h2 className='contact-first-words'><b>Feel free to contact us</b></h2>
         <p>
-          We’d love to hear from you! Whether you have questions, 
+          We'd love to hear from you! Whether you have questions, 
           feedback, or need assistance, our team is here to help. 
           Reach out to us through any of the methods below, and we’ll 
           get back to you as soon as possible.

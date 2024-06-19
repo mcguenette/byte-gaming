@@ -5,7 +5,7 @@ import Header from '../header/Header';
 import heroImage from '../../style/img/hero-6.jpg';
 import './hero.css';
 
-function Hero({onPrimaryClick}) {
+function Hero({ onPrimaryClick }) {
     const navigate = useNavigate();
 
     const contactNav = () => {
@@ -15,7 +15,7 @@ function Hero({onPrimaryClick}) {
         <section className='hero-banner'>
             <div className='hero-image-container'>
                 <Header />
-                <img src={heroImage} alt="Hero Banner" className="hero-image" />
+                <img src={heroImage} alt='Hero Banner' className='hero-image' />
             </div>
             <div className='container'>
                 <div className='hero-content'>

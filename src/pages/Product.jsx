@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Quantity from '../components/QuantityBox';
-import FirstImage from '../style/img/hyperx_headphones.webp';
+import QuantityBox from '../components/QuantityBox';
+import { motion } from 'framer-motion';
 import ProductDisplay from '../products/ProductDisplay';
 
 function Product() {
@@ -22,12 +22,15 @@ function Product() {
     } catch (error) {
       console.error("Failed to fetch product:", error);
     }
-  }
+
+function Product({ pageTransition }) {
+  const [product, setProduct] = useState(null);
+  const { id } = useParams();
 
   useEffect(() => {
     getProduct();
   }, [id]);
-
+  
   const handleImageChange = (newImage) => {
     setSelectedImage(newImage);
     setImageClassName('product-img fade-in');
@@ -38,6 +41,12 @@ function Product() {
   }
 
   return (
+        <motion.div
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      variants={pageTransition}
+    >
 <div className='product-page'>
   <div className='image-and-display-container'>
     <div className='product-image-container'>
@@ -50,12 +59,13 @@ function Product() {
       <p>{product.description}</p>
     <div className='product-price'>
       ${product.price}
-    <Quantity />
+    <QuantityBox />
     </div>
     </div>
   </div>
   </div>
 </div>
+</motion.div>
   );
 }
 

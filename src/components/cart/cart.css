@@ -1,0 +1,105 @@
+/* cart.css */
+:root {
+    --primary-dark: #23292a;
+    --app-bg-dark: rgb(24, 23, 32);
+    --secondary-dark-color: #292837;
+    --primary-grey: #838383;
+    --light-color: #fff;
+    --primary-red: rgb(255, 0, 93);
+    --primary-orange: #FF993A;
+    --primary-purple: #90f;
+    --byte-border-radius: 0px 12px;
+    --byte-border: linear-gradient(148deg, #0198ff2e, #0000);
+    --primary-green: #00c086;
+    --primary-blue: #45c4d2;
+    --primary-blue-hover: rgb(20 123 183 / 18%);
+    --gradient-bg: linear-gradient(148deg, hsl(185.96deg 61.04% 54.71% / 18%), #0000);
+}
+
+.cart-page {
+    margin: 100px 0px;
+    padding-bottom: 100px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-total {
+    margin-top: 40px;
+    font-size: 1.6rem;
+    text-align: right;
+}
+
+.cart-title, .cart-empty {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-title {
+    padding-bottom: 40px;
+}
+
+button.secondary.remove-btn {
+    width: 100px;
+}
+
+.cart-item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item-card {
+    padding: 15px;
+    position: relative;
+    background: linear-gradient(148deg, #0198ff2e, #0000);
+    transition: all ease-in-out .5s;
+    -webkit-transition: all ease-in-out .5s;
+    -moz-transition: all ease-in-out .5s;
+    -ms-transition: all ease-in-out .5s;
+    -o-transition: all ease-in-out .5s;
+    width: 100%;
+    border-radius: 0 12px;
+}
+
+.cart-item-card:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 12px;
+    border: 1px solid transparent;
+    background: linear-gradient(to left, var(--primary-blue) 50%, var(--primary-green)) border-box;
+    -webkit-mask: linear-gradient(var(--light-color) 0 0) padding-box, linear-gradient(var(--light-color) 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+h2.cart-total-price {
+    margin: 15px 0px;
+}
