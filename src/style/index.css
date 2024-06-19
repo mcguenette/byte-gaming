@@ -307,10 +307,6 @@ header {
     position: relative;
 }
 
-.home {
-    visibility: none;
-}
-
 a.active {
     color: var(--primary-green);
 }

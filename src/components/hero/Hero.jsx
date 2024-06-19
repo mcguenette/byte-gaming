@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Button';
 import Header from '../header/Header';
-import heroImage from '../../style/img/hero-6.jpg';
 import './hero.css';
 
 function Hero({ onPrimaryClick }) {
@@ -11,12 +10,11 @@ function Hero({ onPrimaryClick }) {
     const contactNav = () => {
         navigate('/contact');
     };
+
     return (
         <section className='hero-banner'>
-            <div className='hero-image-container'>
-                <Header />
-                <img src={heroImage} alt='Hero Banner' className='hero-image' />
-            </div>
+            <Header />
+
             <div className='container'>
                 <div className='hero-content'>
                     <h2 className='hero-title'>
@@ -38,7 +36,7 @@ function Hero({ onPrimaryClick }) {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Hero;
