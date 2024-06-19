@@ -15,7 +15,7 @@ import Button from '../components/Button';
     
       async function getProduct() {
         try {
-          const response = await fetch(`https://bytegamingapi.azurewebsites.net/product/${id}`);
+          const response = await fetch(`https://dummyjson.com/products/${id}`);
           const data = await response.json();
           setProduct(data);
           setSelectedImage(data.thumbnail);
@@ -45,7 +45,7 @@ import Button from '../components/Button';
           exit='exit'
           variants={pageTransition}
         >
-          <div className='product-page'>
+          <div className='product-page container'>
             <div className='image-and-display-container'>
               <div className='product-image-container'>
                 <img src={selectedImage} alt={`${product.title} image`} className={imageClassName} loading='lazy' />
