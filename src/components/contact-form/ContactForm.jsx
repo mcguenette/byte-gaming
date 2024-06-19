@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../Button";
 
 function ContactForm() {
     return (
@@ -18,7 +18,7 @@ function ContactForm() {
                     <p>Message:</p>
                     <textarea />
                 </label>
-                <Button text="Submit" className={"primary"}/>
+                <Button text="Submit" className={"primary submit-button"}/>
             </form>
         </div>
     );

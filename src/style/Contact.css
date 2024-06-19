@@ -107,11 +107,17 @@
     align-items: center;
     width: 390px;    
     height: 230px;
-    background-color: var(--app-bg-dark);
+    background-color: var(--primary-blue-hover);
+    padding: 0 15px;
+    border-radius: var(--byte-border-radius);
 }
 
 .contact-title {
     color: var(--primary-green);
+}
+
+.get-in-touch {
+    margin-bottom: 30px;
 }
 
 /* Contact form */
@@ -159,3 +165,108 @@
     justify-content: center;
     
 }
+
+.contact-form-label p {
+    margin-bottom: 7px;
+}
+
+textarea{
+    resize: none;
+    width: 400px;
+    height: 200px;
+    padding: 0 15px;
+    border-radius: var(--byte-border-radius);
+    background-color: var(--primary-blue-hover);
+    border: 1px solid var(--primary-blue);
+    color: var(--light-color);
+    font-size: 1.8rem;
+}
+
+.contact-paragraph-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.submit-button {
+    margin-left: 20px;
+}
+
+/* partner bar */
+
+.partner-bar {
+    padding: 20px;
+    background-color: var(--light-color);
+    color: #23292a;
+    text-align: center;
+}
+
+.partner-bar-text {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+}
+
+.partner-bar-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    margin: 20px 0;
+}
+
+.partner-bar-partner {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 0;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    color: var(--primary-dark);
+}
+
+.partner-bar-partner p {
+    color: #23292a;
+}
+
+.partner-bar-img img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px; /* Space between image and name */
+}
+
+.partner-bar-partner p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.partner-bar-img img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.partner-bar-partner p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.align-items-right {
+    justify-content: flex-end;
+}
+
+.align-items-center {
+    justify-content: center;
+}
+
+.align-items-left {
+    justify-content: flex-start;

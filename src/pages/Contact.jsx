@@ -1,6 +1,7 @@
 import React from 'react'
-import GetInTouch from '../components/GetInTouch';
-import ContactForm from '../components/ContactForm';
+import GetInTouch from '../components/get-in-touch/GetInTouch';
+import ContactForm from '../components/contact-form/ContactForm';
+import PartnerBar from '../components/partner-bar/Partner-Bar';
 
 
 function Contact() {
@@ -8,6 +9,10 @@ function Contact() {
     <div>
     <div className='container'>
      <GetInTouch />
+     </div>
+     
+     <PartnerBar />
+     <div className='container'>
      <ContactForm />
     </div>
     </div>
