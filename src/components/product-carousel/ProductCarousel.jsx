@@ -56,7 +56,7 @@ function ProductCarousel() {
                                     </div>
                                     <div className='product-card-image'>
                                         <figure>
-                                            <img src={product.productImageURL} alt={product.productName} className='product-img' />
+                                            <img src={product.productImageURL} alt={product.productName} className={`product-img ${product.productName === 'Y Mouse' ? 'y-mouse' : ''}`} />
                                         </figure>
                                     </div>
                                     <div className='product-card-content'>
