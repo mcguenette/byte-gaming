@@ -1,0 +1,20 @@
+.route-error-div {
+    padding: 150px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .error-page-text {
+        font-family: "Bungee Shade", sans-serif;
+        background: linear-gradient(75deg, var(--primary-green) 0%, var(--primary-blue) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 12rem;
+    }
+
+    p {
+        margin-top: 30px;
+        font-size: 4rem;
+    }
+}

@@ -7,6 +7,7 @@ import Product from './pages/Product';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Footer from './components/footer/Footer';
+import RouteError from './route-error/RouteError';
 
 const pageTransition = {
   initial: { opacity: 0 },
@@ -80,6 +81,19 @@ function App() {
                 variants={pageTransition}
               >
                 <Cart />
+              </motion.div>
+            }
+          />
+          <Route
+            path='*'
+            element={
+              <motion.div
+                initial='initial'
+                animate='animate'
+                exit='exit'
+                variants={pageTransition}
+              >
+                <RouteError />
               </motion.div>
             }
           />
