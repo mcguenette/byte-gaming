@@ -57,9 +57,10 @@ h2.product-title {
 input.qty-input {
     width: 50px;
     padding: 5px;
-    text-align: end;
+    text-align: center;
     border-radius: 5px;
     margin-inline: 5px;
+    -webkit-appearance: textfield;
 }
 
 .quantity-selector button,
@@ -158,10 +159,10 @@ input.qty-input {
     transition: all 0.25s ease-in-out;
 }
 
-
-
-
-
 .thumbnail {
     display: flex;
+}
+
+.product-info h2 {
+    font-size: 4rem;
 }
