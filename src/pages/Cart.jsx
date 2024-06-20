@@ -22,8 +22,8 @@ function Cart() {
         <p className='cart-empty'>Your cart is empty</p>
       ) : (
         <div className='cart-items'>
-          {cartItems.map(product => (
-            <div key={product.productId} className='cart-item cart-item-card'>
+      {cartItems.map((product, index) => (
+          <div key={`${product.productId}-${index}`} className='cart-item cart-item-card'>
               <img src={product.productImageURL} alt={product.productName} />
               <div className='cart-item-details'>
                 <div className='cart-item-left'>
