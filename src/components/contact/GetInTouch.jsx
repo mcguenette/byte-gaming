@@ -17,7 +17,7 @@ function GetInTouch({ contactFormRef }) {
                 <div className='contact-option'>
                     <h2 className='contact-title contact-inside-option'>Phone</h2>
                     <p className='contact-inside-option'>(123) 456-7890</p>
-                    <Button className='contact-inside-option' text="Call us now" />
+                    <Button className='secondary contact-inside-option' text="Call us now" />
                 </div>
                 <div className='contact-option'>
                     <h2 className='contact-title contact-inside-option'>Email</h2>
@@ -28,7 +28,7 @@ function GetInTouch({ contactFormRef }) {
                 <div className='contact-option'>
                     <h2 className='contact-title contact-inside-option'>Chat</h2>
                     <p className='contact-inside-option'>Chat with us</p>
-                    <Button className='contact-inside-option' text="Chat with us" />
+                    <Button className='secondary contact-inside-option' text="Chat with us" />
                 </div>
             </div>
         </div>

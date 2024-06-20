@@ -43,23 +43,28 @@ function ContactForm({ contactFormRef }) {
 
     return (
         <div className="contact-form" ref={contactFormRef}>
-            <h2>Please feel free to text us</h2>
-            <form className={`contact-form-form ${formClass}`} onSubmit={sendEmail}>
-                <label className="contact-form-label">
-                    <p>Name:</p>
-                    <input type="text" value={ContactName} onChange={(e) => setName(e.target.value)} />
-                </label>
-                <label className="contact-form-label">
-                    <p>Email:</p>
-                    <input type="email" value={ContactEmail} onChange={(e) => setEmail(e.target.value)} />
-                </label>
-                <label className="contact-form-label">
-                    <p>Message:</p>
-                    <textarea value={ContactMessage} onChange={(e) => setMessage(e.target.value)} />
-                </label>
-                <Button text="Submit" className={"primary submit-button"} />
-                <p className="email-acception">{emailMessage}</p>
-            </form>
+            <h2 className="text-us-form-header">Please feel free to text us</h2>
+            <div className="contact-form-container">
+  
+                <form className={`contact-form-form ${formClass}`} onSubmit={sendEmail}>
+                    <label className="contact-form-label">
+                        <p>Name:</p>
+                        <input type="text" value={ContactName} onChange={(e) => setName(e.target.value)} />
+                    </label>
+                    <label className="contact-form-label">
+                        <p>Email:</p>
+                        <input type="email" value={ContactEmail} onChange={(e) => setEmail(e.target.value)} />
+                    </label>
+                    <label className="contact-form-label">
+                        <p>Message:</p>
+                        <textarea value={ContactMessage} onChange={(e) => setMessage(e.target.value)} />
+                    </label>
+                    <div className="submit-contact-part">
+                        <Button text="Submit" className={"primary submit-button"} />
+                        <p className="email-acception">{emailMessage}</p>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }
