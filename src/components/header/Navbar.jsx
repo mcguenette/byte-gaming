@@ -37,9 +37,9 @@ function Navbar() {
                         </ul>
                 </li>
                 <li><NavLink to='/contact'>Contact</NavLink></li>
+                <li className='account-icon'><Link>Sign in</Link></li>
                 <li>|</li>
                 <ul className='nav-menu nav-icons'>
-                <li className='account-icon'><Link>Sign in</Link></li>
                 <li className='cart-icon'><Link to='/cart'><FaCartShopping /></Link></li>
                 </ul>
 

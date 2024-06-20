@@ -1,7 +1,8 @@
 /* cart.css */
 .cart-page {
-    padding: 100px 0px;
+    padding: 80px 0px;
 }
+
 .cart-items {
     display: flex;
     flex-direction: column;
