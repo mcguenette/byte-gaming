@@ -1,9 +1,9 @@
 @import url(./reset.css);
 
 :root {
-    --primary-dark: #1a1e1f;
+    --primary-dark: #0a1e24;
     --app-bg-dark: rgb(24, 23, 32);
-    --secondary-dark-color: #292837;
+    --secondary-dark-color: #102f38;
     --primary-grey: #838383;
     --light-color: #fff;
     --primary-red: rgb(255, 0, 93);
@@ -189,7 +189,7 @@ ul.nav-menu.nav-icons {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--primary-dark);
+    background-color: var(--light-color);
     transform-origin: top;
     box-shadow: 0 10px 40px #0000000d;
     opacity: 0;
@@ -225,7 +225,7 @@ ul.nav-menu.nav-icons {
 .subnav-menu li a {
     text-decoration: none;
     display: block;
-    color: var(--light-color);
+    color: var(--primary-dark);
     font-size: 1.6rem;
 }
 
@@ -319,11 +319,11 @@ label {
 }
 
 input::placeholder {
-    color: var(--light-color);
+    color: var(--primary-grey);
 }
 
 input.white-input::placeholder,
-input.white-input {
+input.white-input, .dialog-email {
     color: var(--primary-grey);
 }
 
