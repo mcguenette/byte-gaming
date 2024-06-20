@@ -173,7 +173,7 @@ textarea{
 .partner-bar-img img {
     max-width: 100px;
     max-height: 100px;
-    margin-right: 10px; /* Space between image and name */
+    margin-right: 10px; 
 }
 
 .partner-bar-partner p {
