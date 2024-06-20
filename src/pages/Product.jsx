@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import QuantityBox from '../components/QuantityBox';
 import { motion } from 'framer-motion';
 import ProductDisplay from '../components/product-page/ProductDisplay';
@@ -13,6 +13,7 @@ function Product({ pageTransition }) {
   const [imageClassName, setImageClassName] = useState('product-img fade-in');
   const { productSlug } = useParams();
   const { addToCart } = useContext(CartContext); 
+  const navigate = useNavigate();
 
   async function getProduct() {
     try {
@@ -42,8 +43,11 @@ function Product({ pageTransition }) {
   };
 
   const addProductToCart = (product) => {
-    addToCart(product);
-  };
+    addToCart(product, () => {
+        navigate('/cart');
+    });
+};
+
 
   if (!product) {
     return <p>Loading...</p>;
@@ -80,7 +84,7 @@ function Product({ pageTransition }) {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </motion.div>
   );

@@ -64,7 +64,6 @@ h2 {
     span {
         color: #00f3b6;
 
-        /* Use &: for hover, etc while nesting CSS */
         &:hover {
             color: var(--primary-blue);
         }
