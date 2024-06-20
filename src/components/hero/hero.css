@@ -3,8 +3,8 @@
     overflow: hidden;
     height: 700px;
     background-image: url('https://raw.githubusercontent.com/mcguenette/stored-images/main/img/esports.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
+    background-size: cover;
+    background-position: center; 
 }
 
 .hero-container {
