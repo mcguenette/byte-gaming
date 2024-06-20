@@ -18,9 +18,9 @@ const CartProvider = ({ children }) => {
         });
     };
 
-    const removeItem = (id) => {
+    const removeItem = (productId) => {
         setCart((prevCart) => {
-            const newCart = prevCart.filter(product => product.id !== id);
+            const newCart = prevCart.filter(product => product.productId !== productId);
             localStorage.setItem('cart', JSON.stringify(newCart));
             return newCart;
         });

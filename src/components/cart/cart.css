@@ -1,10 +1,7 @@
 /* cart.css */
-
 .cart-page {
-    margin: 100px 0px;
-    padding-bottom: 100px;
+    padding: 100px 0px;
 }
-
 .cart-items {
     display: flex;
     flex-direction: column;
@@ -29,14 +26,21 @@
     flex-grow: 1;
 }
 
+.cart-total.container {
+    width: 100%;
+}
+
 .cart-total {
-    margin-top: 40px;
+    margin: 40px 0 0 0;
     font-size: 1.6rem;
     text-align: right;
 }
 
 .cart-title, .cart-empty {
     display: flex;
+}
+
+.cart-empty {
     justify-content: center;
 }
 
@@ -55,7 +59,7 @@ button.secondary.remove-btn {
 }
 
 .cart-item-card {
-    padding: 15px;
+    padding: 40px;
     position: relative;
     background: linear-gradient(148deg, #0198ff2e, #0000);
     transition: all ease-in-out .5s;
@@ -86,4 +90,32 @@ button.secondary.remove-btn {
 
 h2.cart-total-price {
     margin: 15px 0px;
+}
+
+.cart-item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-line-item-remove {
+    display: flex;
+    height: 46px;
+}
+
+button.secondary.remove-btn {
+    width: auto;
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+button.secondary.remove-btn:hover {
+    color: var(--primary-red);
 }
