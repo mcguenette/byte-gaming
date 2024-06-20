@@ -158,10 +158,10 @@ input.qty-input {
     transition: all 0.25s ease-in-out;
 }
 
-
-
-
-
 .thumbnail {
     display: flex;
+}
+
+.product-info h2 {
+    font-size: 4rem;
 }
