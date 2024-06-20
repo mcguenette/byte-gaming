@@ -16,5 +16,11 @@
 * Collections page
 * About us section moved to About us page
 * Authentication/Authorization Accounts
+* Cart item count in header
+* Product page multiple images
+* Fix cart with Redux
+* Responsive design
+* Add chat bot
+* Triggering emails from contact us
   
 
