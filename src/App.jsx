@@ -5,20 +5,21 @@ import Header from './components/header/Header';
 import Home from './pages/Home';
 import Product from './pages/Product';
 import Contact from './pages/Contact';
+import Cart from './pages/Cart';
 import Footer from './components/footer/Footer';
 
-const pageVariants = {
-  initial: { opacity: 0, y: 10 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -10 },
-  transition: { duration: 0.4 },
+const pageTransition = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.5, ease: 'easeInOut' },
 };
 
-const homeVariants = {
-  initial: { opacity: 0, y: -10 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 10 },
-  transition: { duration: 0.4 },
+const homeTransition = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.5, ease: 'easeInOut' },
 };
 
 function App() {
@@ -37,20 +38,20 @@ function App() {
                 initial='initial'
                 animate='animate'
                 exit='exit'
-                variants={homeVariants}
+                variants={homeTransition}
               >
                 <Home />
               </motion.div>
             }
           />
           <Route
-            path='/product/:id'
+            path='/product/:productSlug'
             element={
               <motion.div
                 initial='initial'
                 animate='animate'
                 exit='exit'
-                variants={pageVariants}
+                variants={pageTransition}
               >
                 <Product />
               </motion.div>
@@ -63,9 +64,22 @@ function App() {
                 initial='initial'
                 animate='animate'
                 exit='exit'
-                variants={pageVariants}
+                variants={pageTransition}
               >
                 <Contact />
+              </motion.div>
+            }
+          />
+          <Route
+            path='/cart'
+            element={
+              <motion.div
+                initial='initial'
+                animate='animate'
+                exit='exit'
+                variants={pageTransition}
+              >
+                <Cart />
               </motion.div>
             }
           />

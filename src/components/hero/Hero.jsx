@@ -2,25 +2,22 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Button';
 import Header from '../header/Header';
-import heroImage from '../../style/img/hero-6.jpg';
 import './hero.css';
 
-function Hero({onPrimaryClick}) {
+function Hero({ onPrimaryClick }) {
     const navigate = useNavigate();
 
     const contactNav = () => {
         navigate('/contact');
     };
+
     return (
         <section className='hero-banner'>
-            <div className='hero-image-container'>
-                <Header />
-                <img src={heroImage} alt="Hero Banner" className="hero-image" />
-            </div>
-            <div className='container'>
-                <div className='hero-content'>
+            <Header />
+            <div className='hero-container'>
+                <div className='hero-content container'>
                     <h2 className='hero-title'>
-                        Shop <strong className='h1'>BYTE </strong>gaming gear
+                        Shop <b className='h1'>BYTE </b>gaming
                     </h2>
                     <p>Unleash Your Full Gaming Potential with Byte's Premium Accessories</p>
                     <div className='hero-btn'>
@@ -38,7 +35,7 @@ function Hero({onPrimaryClick}) {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Hero;

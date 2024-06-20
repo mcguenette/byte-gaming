@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import Button from './Button';
 
-function Quantity() {
+function QuantityBox() {
     const [quantity, setQuantity] = useState(1);
   
     const increment = () => {
@@ -12,22 +13,15 @@ function Quantity() {
         setQuantity(quantity - 1);
       }
     };
-  
-    // Function to handle adding to cart
-    const addToCart = () => {
-      console.log(`Added ${quantity} item(s) to cart`);
-      // Implement the logic to add the item(s) to the cart
-    };
-  
+    
     return (
-      <div className='quantity-selector'>
-        <button onClick={decrement}>-</button>
-        <input type='number' value={quantity} readOnly />
-        <button onClick={increment}>+</button>
-        <button onClick={addToCart} className='add-to-cart-btn'>Add to Cart</button>
+    <div className='quantity-selector'>
+      <Button onClick={decrement} className="circle-button subract" text='-'/>
+      <input type='number' value={quantity} readOnly  className='qty-input'/>
+      <Button onClick={increment} className="circle-button add" text='+'/>
       </div>
     );
   }
 
   
-export default Quantity;
+export default QuantityBox;

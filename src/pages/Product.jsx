@@ -1,38 +1,89 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import Quantity from '../components/QuantityBox';
-import FirstImage from '../style/img/hyperx_headphones.webp';
+import QuantityBox from '../components/QuantityBox';
+import { motion } from 'framer-motion';
+import ProductDisplay from '../components/product-page/ProductDisplay';
+import Button from '../components/Button';
+import '../components/product-page/product.css';
+import { CartContext } from '../components/cart/CartProvider'; 
 
-function Product() {
-    const [product, setProduct] = useState(null);
-    const { id } = useParams();
+function Product({ pageTransition }) {
+  const [product, setProduct] = useState(null);
+  const [selectedImage, setSelectedImage] = useState('');
+  const [imageClassName, setImageClassName] = useState('product-img fade-in');
+  const { productSlug } = useParams();
+  const { addToCart } = useContext(CartContext); 
 
-    async function getProduct() {
-        const response = await fetch(`https://dummyjson.com/products/${id}`); // Fetch a specific product by ID
-        const data = await response.json(); // Convert the response to JSON
-        setProduct(data); // Set the product data in the state
+  async function getProduct() {
+    try {
+      const response = await fetch(`https://bytegamingapi.azurewebsites.net/products`);
+      const data = await response.json();
+      const product = data.find(p => p.productSlug === productSlug);
+
+      if (product) {
+        setProduct(product);
+        setSelectedImage(product.productImageURL);
+        window.scrollTo(0, 0);
+      } else {
+        console.error('Product not found');
+      }
+    } catch (error) {
+      console.error('Failed to fetch product:', error);
     }
+  }
 
-    useEffect(() => {
-        getProduct();
-    }, [id]);
+  useEffect(() => {
+    getProduct();
+  }, [productSlug]);
 
-    if (!product) {
-        return <div>Loading...</div>;
-    }
+  const handleImageChange = (newImage) => {
+    setSelectedImage(newImage);
+    setImageClassName('product-img fade-in');
+  };
 
-    return (
-        <div className='product-container'>
-            <div className='product-img-container'>
-                <img src={product.thumbnail || FirstImage} alt='product' className='product-img' />
-                <h1>{product.title}</h1>
-                <Quantity />
-            </div>
+  const addProductToCart = (product) => {
+    addToCart(product);
+  };
+
+  if (!product) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <motion.div
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      variants={pageTransition}
+    >
+      <div className='product-page container'>
+        <div className='product-display-container'>
+          <div className='product-image-container'>
+            <img src={selectedImage} alt={`${product.productName} image`} className={imageClassName} loading='lazy' />
+            <ProductDisplay id={product.productId} setSelectedImage={handleImageChange} />
+          </div>
+          <div className='product-info'>
+            <h4>BYTE GAMING</h4>
+            <h2>{product.productName}</h2>
             <div className='product-description'>
-                <p>{product.description}</p>
+              <p className='p'>{product.productDescription}</p>
+              <div className='product-price'>
+                <p>${product.productPrice}</p>
+              </div>
+              <div className='product-page-atc'>
+                <QuantityBox />
+                <Button
+                  className='primary'
+                  text='Add to cart'
+                  onClick={() => addProductToCart(product)}
+                />
+              </div>
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </motion.div>
+  );
 }
 
 export default Product;
