@@ -162,3 +162,6 @@ input.qty-input {
 
 
 
+.thumbnail {
+    display: flex;
+}
