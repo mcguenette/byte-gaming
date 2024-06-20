@@ -1,8 +1,19 @@
-# React + Vite
+# React Project - Byte Gaming
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### List of features
+* Cart page
+* Dialog
+* Carousel
+* Custom API
 
-Currently, two official plugins are available:
+#### List of future features
+* Slide Cart (Ajax)
+* More sections:
+  * Recommended products
+  * Reviews/Testimonials
+  * others
+* Add more products
+* Collections page
+* About us section moved to About us page
+  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

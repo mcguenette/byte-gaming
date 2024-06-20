@@ -3,7 +3,7 @@ import './cart.css';
 
 export const CartContext = createContext();
 
-const CartProvider = ({ children }) => {
+function CartProvider({ children }) {
     const [cart, setCart] = useState(() => {
         const savedCart = localStorage.getItem('cart');
         return savedCart ? JSON.parse(savedCart) : [];
@@ -18,9 +18,9 @@ const CartProvider = ({ children }) => {
         });
     };
 
-    const removeItem = (id) => {
+    const removeItem = (productId) => {
         setCart((prevCart) => {
-            const newCart = prevCart.filter(product => product.id !== id);
+            const newCart = prevCart.filter(product => product.productId !== productId);
             localStorage.setItem('cart', JSON.stringify(newCart));
             return newCart;
         });
@@ -35,6 +35,6 @@ const CartProvider = ({ children }) => {
             {children}
         </CartContext.Provider>
     );
-};
+}
 
 export default CartProvider;

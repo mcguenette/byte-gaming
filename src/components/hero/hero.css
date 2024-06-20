@@ -3,8 +3,8 @@
     overflow: hidden;
     height: 700px;
     background-image: url('https://raw.githubusercontent.com/mcguenette/stored-images/main/img/esports.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
+    background-size: cover;
+    background-position: center; 
 }
 
 .hero-container {
@@ -33,7 +33,7 @@
     flex-direction: column;
     height: 100%;
     z-index: 2;
-    gap: 20px;
+    gap: 30px;
 }
 
 .hero-content h2.hero-title {
@@ -42,6 +42,8 @@
 
 .hero-content p {
     font-size: 2rem;
+    width: 38%;
+    text-align: center;
 }
 
 .hero-btn {
