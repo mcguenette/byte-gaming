@@ -1,24 +1,23 @@
-import React from 'react'
+import { useRef } from 'react';
 import GetInTouch from '../components/contact/GetInTouch';
 import ContactForm from '../components/contact/ContactForm';
-import { motion } from 'framer-motion';
+import PartnerBar from '../components/contact/Partner-Bar';
 import '../components/contact/contact.css';
 
+function Contact() {
+  const contactFormRef = useRef(null);
 
-function Contact({pageTransition}) {
   return (
-    <motion.div
-    initial='initial'
-    animate='animate'
-    exit='exit'
-    variants={pageTransition}
-  >
-    <div className='container'>
-     <GetInTouch />
-     <ContactForm />
+    <div>
+      <div className='container'>
+        <GetInTouch contactFormRef={contactFormRef} />
+      </div>
+      <PartnerBar />
+      <div className='container'>
+        <ContactForm contactFormRef={contactFormRef} />
+      </div>
     </div>
-    </motion.div>
-  )
+  );
 }
 
 export default Contact;
