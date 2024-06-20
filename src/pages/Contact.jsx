@@ -1,22 +1,22 @@
-import React from 'react'
-import GetInTouch from '../components/get-in-touch/GetInTouch';
-import ContactForm from '../components/contact-form/ContactForm';
-import PartnerBar from '../components/partner-bar/Partner-Bar';
-
+import { useRef } from 'react';
+import GetInTouch from '../components/contact/GetInTouch';
+import ContactForm from '../components/contact/ContactForm';
+import PartnerBar from '../components/contact/Partner-Bar';
 
 function Contact() {
+  const contactFormRef = useRef(null);
+
   return (
     <div>
-    <div className='container'>
-     <GetInTouch />
-     </div>
-     
-     <PartnerBar />
-     <div className='container'>
-     <ContactForm />
+      <div className='container'>
+        <GetInTouch contactFormRef={contactFormRef} />
+      </div>
+      <PartnerBar />
+      <div className='container'>
+        <ContactForm contactFormRef={contactFormRef} />
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
 export default Contact;

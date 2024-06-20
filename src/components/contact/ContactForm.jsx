@@ -1,10 +1,11 @@
-import React from "react";
+
 import Button from "../Button";
 
-function ContactForm() {
+// eslint-disable-next-line react/prop-types
+function ContactForm({ contactFormRef }) {
     return (
-        <div className="contact-form">
-            <h2 className="">Contact Us</h2>
+        <div className="contact-form" ref={contactFormRef}>
+            <h2>Please fill free to text us</h2>
             <form className="contact-form-form">
                 <label className="contact-form-label">
                     <p>Name:</p>
@@ -25,3 +26,4 @@ function ContactForm() {
 }
 
 export default ContactForm;
+

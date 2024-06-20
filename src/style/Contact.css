@@ -24,54 +24,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-.contact-option{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;    
-    height: 350px;
-    background-color: var(--app-bg-dark);
+    margin-top: 100px;
+    margin-bottom: 200px;
 }
 
 .contact-title{
     color: var(--primary-green);
-}
-
-.hero-contact-image {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Adjust height as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.hero-image {
-    width: 100%;
-    height:100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value for more or less darkness */
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .hero-contact-wrapper {
@@ -91,14 +49,6 @@
     margin-top: 10px;
 }
 
-.contact-options {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
 .contact-option {
     margin-top: 30px;
     display: flex;
@@ -106,10 +56,10 @@
     justify-content: center;
     align-items: center;
     width: 390px;    
-    height: 230px;
     background-color: var(--primary-blue-hover);
-    padding: 0 15px;
+    padding: 60px;
     border-radius: var(--byte-border-radius);
+    
 }
 
 .contact-title {
@@ -117,7 +67,8 @@
 }
 
 .get-in-touch {
-    margin-bottom: 30px;
+    margin-bottom: 100px;
+    margin-top: 50px;
 }
 
 /* Contact form */
@@ -156,6 +107,7 @@
 
 .contact-inside-option {
     margin:15px;
+    padding: 0 10px;
 }
 
 .contact-paragraph {
@@ -163,7 +115,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    
+    margin: 30px 0 30px 0;
 }
 
 .contact-form-label p {
@@ -249,11 +201,6 @@ textarea{
     font-weight: bold;
 }
 
-.partner-bar-img img {
-    max-width: 100px;
-    max-height: 100px;
-}
-
 .partner-bar-partner p {
     margin: 0;
     font-size: 16px;
@@ -270,3 +217,4 @@ textarea{
 
 .align-items-left {
     justify-content: flex-start;
+}

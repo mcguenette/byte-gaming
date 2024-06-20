@@ -1,7 +1,8 @@
-import React from 'react';
 
 
+// Function defining the PartnerBar component which displays partner logos and names
 function PartnerBar() {
+    // Array of partner objects containing name and image URL
     const partners = [
         {
             name: "Logitech",
@@ -32,9 +33,14 @@ function PartnerBar() {
     return (
         <div className="partner-bar">
             <div className='container'>
+                {/* Heading for the partner bar */}
                 <p className="partner-bar-text">Partners</p>
+                
+                {/* Container for partner logos and names */}
                 <div className="partner-bar-top">
+                    {/* Iterating over the partners array and rendering each partner */}
                     {partners.map((partner, index) => {
+                        // Determining the alignment class based on the index
                         let alignmentClass;
                         if ((index % 3) === 0) {
                             alignmentClass = 'align-items-left';
@@ -46,12 +52,14 @@ function PartnerBar() {
 
                         return (
                             <div className={`partner-bar-partner ${alignmentClass}`} key={index}>
+                                {/* Container for the partner's image */}
                                 <div className="partner-bar-img">
                                     <img 
                                         src={partner.imageUrl} 
                                         alt={partner.name} 
                                     />
                                 </div>
+                                {/* Displaying the partner's name */}
                                 <p>{partner.name}</p>
                             </div>
                         );
@@ -62,4 +70,4 @@ function PartnerBar() {
     );
 }
 
-export default PartnerBar;
+export default PartnerBar; 

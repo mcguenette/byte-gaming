@@ -1,12 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import Button from '../Button';
 import { IoClose } from "react-icons/io5";
 import { useForm } from 'react-hook-form';
 import './dialog.css';
 
+// eslint-disable-next-line react/prop-types
 function Dialog({ isOpen, onClose }) {
     const dialogRef = useRef(null);
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
 
     useEffect(() => {
