@@ -38,11 +38,13 @@
 
 .hero-content h2.hero-title {
     font-size: 7rem;
+    width: 85%;
+    text-align: center;
 }
 
 .hero-content p {
     font-size: 2rem;
-    width: 38%;
+    width: 55%;
     text-align: center;
 }
 
