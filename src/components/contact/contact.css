@@ -35,9 +35,10 @@
     justify-content: center;
     align-items: center;
     width: 390px;    
-    background-color: var(--primary-blue-hover);
     padding: 60px;
     border-radius: var(--byte-border-radius);
+    background-color: var(--primary-blue-hover);
+    border: 1px solid var(--primary-blue);
     
 }
 
@@ -48,6 +49,16 @@
 .get-in-touch {
     margin-bottom: 100px;
     margin-top: 50px;
+}
+
+.text-us-form-header 
+{
+    margin-top: 38px;
+}
+
+.contact-form-container {
+    width: 300px;
+ 
 }
 
 /* Contact form */
@@ -63,26 +74,33 @@
 .contact-form-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 
 }
 
 .contact-form-label {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     margin-bottom: 10px;
+}
+
+.submit-contact-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contact-first-words {
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: left;
+    align-items: top;
+    text-align: left;
     margin-bottom: 60px;
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .contact-inside-option {
@@ -137,16 +155,12 @@ textarea::-ms-scrollbar {
     align-items: center;
 }
 
-.submit-button, .email-acception {
-    margin-left: 20px;
+.submit-button {
+    margin-left: 10px;
 }
 
-.big-margin-bottom {
-    margin-bottom: 39px;
-}
-
-.small-margin-bottom {
-    margin-bottom: 15px;
+.email-acception {
+    font-size: 12px;
 }
 
 /* partner bar */
