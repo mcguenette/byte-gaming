@@ -5,22 +5,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-<<<<<<< HEAD:src/style/Contact.css
     margin-top: 100px;
     margin-bottom: 200px;
-=======
-}
-
-.contact-option{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;    
-    height: 350px;
-    background-color: var(--primary-dark);
->>>>>>> 6e4210b281d077488b435a5f5f352b0a9a90fd11:src/components/contact/contact.css
 }
 
 .contact-title{
@@ -50,17 +36,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD:src/style/Contact.css
     width: 390px;    
     background-color: var(--primary-blue-hover);
     padding: 60px;
     border-radius: var(--byte-border-radius);
     
-=======
-    width: 330px;    
-    height: 330px;
-    background-color: var(--primary-dark);
->>>>>>> 6e4210b281d077488b435a5f5f352b0a9a90fd11:src/components/contact/contact.css
 }
 
 .contact-title {
