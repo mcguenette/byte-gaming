@@ -5,7 +5,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 100px;
     margin-bottom: 200px;
 }
 
@@ -31,7 +30,6 @@
 }
 
 .contact-option {
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,6 +65,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .contact-form-label {
@@ -82,8 +81,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 .contact-inside-option {
@@ -102,17 +101,30 @@
 .contact-form-label p {
     margin-bottom: 7px;
 }
-
-textarea{
+textarea {
     resize: none;
-    width: 400px;
-    height: 200px;
-    padding: 0 15px;
+    width: 300px;
+    height: 100px;
+    padding: 10px 15px;
     border-radius: var(--byte-border-radius);
     background-color: var(--primary-blue-hover);
     border: 1px solid var(--primary-blue);
     color: var(--light-color);
     font-size: 1.8rem;
+    overflow: hidden;
+}
+textarea::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+textarea {
+    scrollbar-width: none; 
+}
+
+textarea::-ms-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .contact-paragraph-div {
@@ -125,8 +137,16 @@ textarea{
     align-items: center;
 }
 
-.submit-button {
+.submit-button, .email-acception {
     margin-left: 20px;
+}
+
+.big-margin-bottom {
+    margin-bottom: 39px;
+}
+
+.small-margin-bottom {
+    margin-bottom: 15px;
 }
 
 /* partner bar */
