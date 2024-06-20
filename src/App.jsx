@@ -45,7 +45,7 @@ function App() {
             }
           />
           <Route
-            path='/product/:id'
+            path='/product/:productSlug'
             element={
               <motion.div
                 initial='initial'
