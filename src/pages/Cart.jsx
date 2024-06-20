@@ -53,7 +53,7 @@ function Cart() {
       {cartItems.length > 0 && (
         <div className='cart-total container'>
           <h3 className='cart-total-price'>
-            Cart Total: ${cartItems.reduce((total, product) => total + product.productPrice, 0)}
+          Cart Total: ${parseFloat(cartItems.reduce((total, product) => total + product.productPrice, 0).toFixed(2))}
           </h3>
           <Button className='primary' text='Checkout' />
         </div>
