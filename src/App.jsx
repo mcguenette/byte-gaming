@@ -12,14 +12,14 @@ const pageTransition = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
-  transition: { duration: 0.3, ease: 'easeInOut' },
+  transition: { duration: 0.5, ease: 'easeInOut' },
 };
 
 const homeTransition = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
-  transition: { duration: 0.3, ease: 'easeInOut' },
+  transition: { duration: 0.5, ease: 'easeInOut' },
 };
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
             }
           />
           <Route
-            path='/product/:id'
+            path='/product/:productSlug'
             element={
               <motion.div
                 initial='initial'

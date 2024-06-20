@@ -1,3 +1,4 @@
+
 /* Product Page */
 .product-display-container {
     display: flex;
@@ -67,10 +68,6 @@ input.qty-input {
     display: block;
 }
 
-button.add {
-    margin-right: 5px;
-}
-
 .main-product-image {
     max-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -94,6 +91,7 @@ button.add {
 
 .product-thumbnail.active {
     border: 2px solid var(--primary-green);
+    border-radius: 5px;
 }
 
 .image-group {
@@ -134,9 +132,9 @@ button.add {
     transform: scale(1.1);
 }
 
-.quantity-selector button,
-.add-to-cart-button {
+.quantity-selector button, .add-to-cart-button {
     display: block;
+    margin: 0;
 }
 
 .circle-button {

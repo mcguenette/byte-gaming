@@ -65,6 +65,7 @@ section.product-carousel-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 15px;
 }
 
 .product-price p {
@@ -84,4 +85,8 @@ p.regular {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+
+.section-title-middle p {
+    font-size: 1.4rem;
 }

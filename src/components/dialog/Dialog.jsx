@@ -49,6 +49,7 @@ function Dialog({ isOpen, onClose }) {
             <input 
             type="email" 
             placeholder="Email" {...register("Email", {required: true, maxLength: 80})}
+            className='dialog-email'
             />
             <Button
                 className=' primary'
