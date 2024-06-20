@@ -3,7 +3,7 @@ import './cart.css';
 
 export const CartContext = createContext();
 
-const CartProvider = ({ children }) => {
+function CartProvider({ children }) {
     const [cart, setCart] = useState(() => {
         const savedCart = localStorage.getItem('cart');
         return savedCart ? JSON.parse(savedCart) : [];
@@ -35,6 +35,6 @@ const CartProvider = ({ children }) => {
             {children}
         </CartContext.Provider>
     );
-};
+}
 
 export default CartProvider;

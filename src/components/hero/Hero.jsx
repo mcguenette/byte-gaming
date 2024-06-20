@@ -17,7 +17,7 @@ function Hero({ onPrimaryClick }) {
             <div className='hero-container'>
                 <div className='hero-content container'>
                     <h2 className='hero-title'>
-                        Shop <b className='h1'>BYTE </b>gaming gear
+                        Shop <b className='h1'>BYTE </b>gaming
                     </h2>
                     <p>Unleash Your Full Gaming Potential with Byte's Premium Accessories</p>
                     <div className='hero-btn'>
