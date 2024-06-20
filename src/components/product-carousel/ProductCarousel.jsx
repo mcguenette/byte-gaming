@@ -38,9 +38,8 @@ function ProductCarousel() {
                     </div>
                     <div className='section-title-middle'>
                         <p>
-                            Explore our curated collection of elite accessories.
-                            Elevate your gameplay with precision and
-                            performance.
+                        Discover our thoughtfully curated collection of premium accessories. Elevate your gameplay 
+                        with unparalleled precision and performance, and gain the competitive edge you deserve.
                         </p>
                     </div>
                     <div className='section-title-right'>

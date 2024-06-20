@@ -119,3 +119,7 @@ button.secondary.remove-btn {
 button.secondary.remove-btn:hover {
     color: var(--primary-red);
 }
+
+h3.cart-total-price {
+    margin-bottom: 10px;
+}
