@@ -11,16 +11,22 @@ function Product({ pageTransition }) {
   const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState('');
   const [imageClassName, setImageClassName] = useState('product-img fade-in');
-  const { id } = useParams();
+  const { productSlug } = useParams();
   const { addToCart } = useContext(CartContext); 
 
   async function getProduct() {
     try {
-      const response = await fetch(`https://dummyjson.com/products/${id}`);
+      const response = await fetch(`https://bytegamingapi.azurewebsites.net/products`);
       const data = await response.json();
-      setProduct(data);
-      setSelectedImage(data.thumbnail);
-      window.scrollTo(0, 0);
+      const product = data.find(p => p.productSlug === productSlug);
+
+      if (product) {
+        setProduct(product);
+        setSelectedImage(product.productImageURL);
+        window.scrollTo(0, 0);
+      } else {
+        console.error('Product not found');
+      }
     } catch (error) {
       console.error('Failed to fetch product:', error);
     }
@@ -28,7 +34,7 @@ function Product({ pageTransition }) {
 
   useEffect(() => {
     getProduct();
-  }, [id]);
+  }, [productSlug]);
 
   const handleImageChange = (newImage) => {
     setSelectedImage(newImage);
@@ -44,38 +50,38 @@ function Product({ pageTransition }) {
   }
 
   return (
-        <motion.div
-          initial='initial'
-          animate='animate'
-          exit='exit'
-          variants={pageTransition}
-        >
-          <div className='product-page container'>
-            <div className='product-display-container'>
-              <div className='product-image-container'>
-                <img src={selectedImage} alt={`${product.title} image`} className={imageClassName} loading='lazy' />
-                <ProductDisplay id={id} setSelectedImage={handleImageChange} />
+    <motion.div
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      variants={pageTransition}
+    >
+      <div className='product-page container'>
+        <div className='product-display-container'>
+          <div className='product-image-container'>
+            <img src={selectedImage} alt={`${product.productName} image`} className={imageClassName} loading='lazy' />
+            <ProductDisplay id={product.productId} setSelectedImage={handleImageChange} />
+          </div>
+          <div className='product-info'>
+            <h4>BYTE GAMING</h4>
+            <h2>{product.productName}</h2>
+            <div className='product-description'>
+              <p className='p'>{product.productDescription}</p>
+              <div className='product-price'>
+                <p>${product.productPrice}</p>
               </div>
-              <div className='product-info'>
-                <h4>BYTE GAMING</h4>
-                <h2>{product.title}</h2>
-                <div className='product-description'>
-                  <p className='p'>{product.description}</p>
-                  <div className='product-price'>
-                    <p>${product.price}</p>
-                  </div>
-                  <div className='product-page-atc'>
-                  <QuantityBox />
-                    <Button
-                        className='primary'
-                        text='Add to cart'
-                        onClick={() => addProductToCart(product)}
-                    />
-                  </div>
-                </div>
+              <div className='product-page-atc'>
+                <QuantityBox />
+                <Button
+                  className='primary'
+                  text='Add to cart'
+                  onClick={() => addProductToCart(product)}
+                />
               </div>
             </div>
           </div>
+        </div>
+      </div>
     </motion.div>
   );
 }
