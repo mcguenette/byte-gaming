@@ -4,36 +4,29 @@ const ProductDisplay = ({ id, setSelectedImage }) => {
   const [productImages, setProductImages] = useState([]);
 
   useEffect(() => {
-    const fetchProductDetails = async () => {
+    const fetchProductImages = async () => {
       try {
-        const response = await fetch(`https://bytegamingapi.azurewebsites.net/product`);
+        const response = await fetch(`https://bytegamingapi.azurewebsites.net/products`);
+        
+        if (!response.ok) {
+          throw new Error(`Failed to fetch product images: ${response.status}`);
+        }
+
         const data = await response.json();
         const product = data.find(p => p.productId === id);
 
         if (product) {
-          const productSlug = product.productSlug;
-          fetchProductImages(productSlug);
+          setProductImages([product.productImageURL]);
+          setSelectedImage(product.productImageURL);
         } else {
           console.error('Product not found');
         }
-      } catch (error) {
-        console.error('Error fetching product details:', error);
-      }
-    };
-
-    const fetchProductImages = async (productSlug) => {
-      try {
-        const response = await fetch(`https://bytegamingapi.azurewebsites.net/product/${productSlug}`);
-        const data = await response.json();
-        setProductImages(data.images);
-        // Optionally initialize the main image with the first image
-        setSelectedImage(data.images[0]);
       } catch (error) {
         console.error('Error fetching product images:', error);
       }
     };
 
-    fetchProductDetails();
+    fetchProductImages();
   }, [id, setSelectedImage]);
 
   const handleClick = (image) => {
@@ -42,33 +35,18 @@ const ProductDisplay = ({ id, setSelectedImage }) => {
 
   return (
     <div className='product-display'>
-      <div className='product-col product-col2'>
+      <div className='thumbnails-group'>
         {productImages.map((image, index) => (
-          <div key={index} className='image-group'>
-            <img
-              alt='Product Thumbnail'
-              className='product-thumbnail'
-              src={image}
-              onClick={() => handleClick(image)}
-            />
-            <img
-              alt='Product Thumbnail Duplicate'
-              className='product-thumbnail'
-              src={image}
-              onClick={() => handleClick(image)}
-            />
-            <img
-              alt='Product Thumbnail Duplicate 2'
-              className='product-thumbnail'
-              src={image}
-              onClick={() => handleClick(image)}
-            />
-            <img
-              alt='Product Thumbnail Duplicate 3'
-              className='product-thumbnail'
-              src={image}
-              onClick={() => handleClick(image)}
-            />
+          <div key={`thumbnail-${index}`} className='thumbnail'>
+            {[...Array(4)].map((_, i) => (
+              <img
+                key={i}
+                alt={`Product Thumbnail ${i}`}
+                className='product-thumbnail'
+                src={image}
+                onClick={() => handleClick(image)}
+              />
+            ))}
           </div>
         ))}
       </div>

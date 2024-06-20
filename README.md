@@ -15,5 +15,6 @@
 * Add more products
 * Collections page
 * About us section moved to About us page
+* Authentication/Authorization Accounts
   
 
