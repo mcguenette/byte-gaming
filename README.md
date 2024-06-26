@@ -1,3 +1,5 @@
+<img src="https://github.com/riley-ad-clark/image-collection/blob/main/byte-gaming-gif.gif">
+
 # React Project - Byte Gaming
 
 ### Back-end work
