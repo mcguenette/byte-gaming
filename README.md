@@ -2,13 +2,11 @@
 
 # React Project - Byte Gaming
 
-### Back-end work
-<a href="https://github.com/riley-ad-clark/byte-gaming-backend">Click here for API!</a>
 ### List of features
 * Cart page
 * Dialog
 * Carousel
-* Custom API
+* <a href="https://github.com/riley-ad-clark/byte-gaming-backend">Custom API</a>
 
 #### List of future features
 * Slide Cart (Ajax)
